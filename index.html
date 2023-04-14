@@ -216,8 +216,7 @@
                 </tr>                                 
                 <tr>
                 <th >
-                  <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">
-                  
+                  <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">  
                 </th>
                 <th>
                   <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary" id="boton7">Calcular Presupuesto</button>
@@ -239,6 +238,7 @@
           <ul id="resultados"></ul>
         </div>    
       </div> 
+      <div>
        <div id="agregarProductos">
         <button id="agregar-producto" class="btn btn-primary">Agregar Producto</button>
        <div id="modal-agregar-producto">
@@ -249,13 +249,16 @@
          <input type="text" id="descripcionx" name="descripcion">   
          <label for="precio">Precio:</label>
          <input type="number" id="preciox" name="precio"> 
-        <button type="submit" class="btn btn-primary">Confirmar</button>
+        <button type="submit" class="btn btn-primary">Agregar al Storage</button>      
       </form>  
      </div>
     </div>
-         <div class="container diagnosticos_contenedor" style="display:none;" id="diagnosticos_contenedor">   
-           <div class="row">
-            <div class="col border border-success-subtle">
+    <div id="contenedorBtnLimpiarStorage">
+      <button id="boton9"  type="submit" class="btn btn-secondary">Eliminar Storage</button>
+    </div>  
+      <div class="container diagnosticos_contenedor" style="display:none;" id="diagnosticos_contenedor">   
+        <div class="row">
+          <div class="col border border-success-subtle">
               <p class="completo_titulo1">   A. LUBRICANTES Y FILTROS </p>                         
               <p class="nazul">01</p> Cambios de aceite y Filtro   <br>    
               <p class="nazul">02</p> Reemplazo de filtro de aire  <br>
@@ -346,7 +349,8 @@
                   </div>
                     <div class="border border-success-subtle" style="display:none;" id="contenedorCertificado"> 
                     <p class="certificado"><b> El Servicio Completo y Premium con Elaion incluye Diagnóstico de 27 puntos, Certificado de Servicio y Producto, Base de datos con el Historial de su Vehículo  sin costo de mano de obra.(Presupuesto sujeto a modificaciones sin previo aviso)</b></p> 
-                  </div>          
+                  </div> 
+                  <div id="contenedorProductos"></div>         
     </main>
     <footer> 
     </footer>
