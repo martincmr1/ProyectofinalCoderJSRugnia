@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://kit.fontawesome.com/302e8bad55.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css"> 
+    <title>PRESUPUESTO YPF BOXES</title>
+</head>
+<body>
+    <header>        
+    </header>
+    <main> 
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12 col-xl-12 border border-success-subtle">
+                <div class="contenedor_logo row border border-success-subtle">
+                    <div class="row">
+                      <div class=" col-3 col-md-3 col-sm-3 col-xl-3">
+                         <img src="./css/logo.jpg" alt="logo" class="logo_boxes"> 
+                        </div>
+                          <div class="parrafo_revision col-7 col-md-7 col-sm-7 col-xl-7">
+                          <p><b>  27 PUNTOS DE REVISION + ESCANEO ELECTRONICO</b></p>
+                        </div>
+                        <div class="fecha col-2 col-md-2 col-sm-2 col-xl-2" id="fechaYhora">
+                        </div>
+                          <div class="row">
+                            <div class="datos_contacto col-4 col-md-4 col-sm-4 col-xl-4">
+                             <img class="imagen_ubicacion" src="./img/ubicacion.png" alt=""> Bartolomé Mitre 1666 Morón
+                           </div>
+                            <div class="col-1 col-md-1 col-sm-1 col-xl-1"><p>Turnos:</p>
+                          </div>                        
+                            <div class="col-3 col-md-3 col-sm-3 col-xl-3 datos_contacto d-flex">
+                              <img class="appypf_logo" src="./img/unnamed.png" alt=""><p>  APP YPF</p>
+                            </div> 
+                              <div class="col-3 col-md-3 col-sm-3 col-xl-3 datos_contacto d-flex">
+                                <img class="whatsapp_logo" src="./img/whastapp.png" alt=""><p>  1138110074</p>
+                              </div>
+                            </div>  
+                              <div class="row">
+                                <div class="col-md-1 col-1 col-sm-1 col-1 col-xl-1">
+                                 <p>Vehiculo</p>
+                             </div>                    
+                              <div class="col-md-7 col-7 col-sm-7 col-xl-7">                 
+                               <select class="form-select form-select-sm mb-3 coches" aria-label=".form-select-sm example" id="autos">
+                                <option selected><p id="recargarPagina" style="display:none;"></p></option>
+                                 <optgroup label="Chevrolet">
+                                  <option value="prisma/onix1.4/spin1.8">Chevrolet Prisma/Onix 1.4 - Spin 1.8</option>
+                                  <option value="corsaclassic">Chevrolet Corsa Classic/Agile</option>
+                                  <option value="tracker18">Chevrolet Tracker 1.8</option>
+                                  <option value="meriva18">Chevrolet Meriva 1.8</option>
+                                  <option value="aveog3">Chevrolet Aveo G3</option>
+                                  <option value="cruze18">Chevrolet Cruze 1.8 16v</option>
+                                  <option value="cruze14">Chevrolet Cruze 1.4</option>
+                                  <option value="celta">Chevrolet Celta</option>
+                                  <option value="sonic">Chevrolet Sonic</option>
+                                  <option value="s10duramax">Chevrolet S10 2.8 (DURAMAX)</option>
+                                </optgroup>
+                                <optgroup label="CITROEN">
+                                 <option value="c3nafta">Citroen C3 NAFTA / Aircross /Berlingo 1.4 1.6 </option>
+                                 <option value="c416nafta">Citroen C4 1.6 vti</option> 
+                                 <option value="c416thp">Citroen C4 1.6 thp</option> 
+                                 <option value="berlingo19">Citroen Berlingo 1.9 d </option>
+                                 <option value="berlingohdi">Citroen Berlingo hdi 1.6 /C4 1.6 hdi</option>     
+                               </optgroup>
+                               <optgroup label="FIAT">
+                                 <option value="argo/cronos13">Fiat Argo/Cronos 1.3</option>
+                                 <option value="argo/cronos18">Fiat Argo/Cronos 1.8</option>
+                                 <option value="paliosiena14">Fiat Palio/Siena 1.4 /Fiorino 1.4 /Idea 1.4</option>
+                                 <option value="paliosiena16">Fiat Palio/Siena 1.6 /Strada /Idea 1.6 e-Torq</option>
+                                 <option value="punto14">Fiat Punto 1.4 fire</option>
+                                 <option value="mobi">Fiat MOBI </option>
+                                 <option value="torod">Fiat Toro Diesel</option>
+                                 <option value="toron">Fiat Toro Nafta 1.8</option>
+                              </optgroup>
+                              <optgroup label="FORD">
+                                <option value="ecosportrocam">Ford Fiesta /Ecosport Rocam 1.6</option>
+                                <option value="fiestakinetic">Ford Fiesta kinetic /Ecosport 1.6 16v /ka 1.6</option>
+                                <option value="focus2/31.6">Ford Focus II/III 1.6</option>
+                                <option value="focus2/2.0">Ford Focus II/III 2.0</option> 
+                                <option value="ka2rocam">Ford KA II 1.6 /1.0 ROCAM</option>
+                                <option value="ecosport15">Ford Ecosport /KA 1.5 dragon</option>
+                                <option value="ranger30pe">Ford Ranger 3.0</option>
+                                <option value="ranger22d">Ford Ranger 2.2</option>  
+                                <option value="ranger32">Ford Ranger 3.2</option>                                                             
+                              </optgroup>
+                              <optgroup label="HONDA">
+                                <option value="hrv2">Honda hrv II 1.8</option>
+                                <option value="fit15">Honda Fit 1.5</option>
+                              </optgroup>
+                              <optgroup label="JEEP">
+                                <option value="renegadenafta">Jeep Renegade nafta</option>
+                              </optgroup>
+                          <optgroup label="PEUGEOT">
+                            <option value="20716">Peugeot 207 1.6 16v /307 1.6 16v</option>
+                            <option value="20714">Peugeot 207 1.4 8v </option>
+                            <option value="partner19">Peugeot Partner 1.9 d </option>
+                            <option value="partner16">Peugeot Partner 1.4 8v / 1.6 16v </option>
+                            <option value="partnerhdi">Peugeot Partner hdi 1.6 </option>
+                            <option value="208n">Peugeot 208 16v vti/8v</option>
+                            <option value="30816thp">Peugeot 308 1.6 thp </option>
+                            <option value="30816vti">Peugeot 308 1.6 vti </option>
+                            <option value="30816hdi">Peugeot 308 1.6 hdi </option>
+                          </optgroup> 
+                          <optgroup label="RENAULT">
+                            <option value="clio12">Renault Clio 1.2 </option>
+                            <option value="oroch20">Renault Oroch 2.0 / Duster 2.0</option>
+                            <option value="kangoon">Renault Kangoo / Duster / Symbol / Sandero / Clio 1.6 16v </option>
+                            <option value="sandero8v">Renault Sandero 8v </option>
+                            <option value="kangoostepwayn">Renault Kangoo Steepway Nafta </option>
+                            <option value="kwid">Renault Kwid</option>
+                          </optgroup>  
+                          <optgroup label="TOYOTA">
+                            <option value="etios">Toyota Etios</option>
+                            <option value="corolla2011">Toyota Corolla 2011+</option>
+                            <option value="hilux30">Toyoya Hilux 3.0</option>  
+                          </optgroup>  
+                          <optgroup label="Volkswagen">
+                            <option value="goltrend">Volkswagen Gol Trend/Voyage 1.6</option>
+                            <option value="suran8v">VolkswagenSuran/Fox 8v</option>
+                            <option value="suran16v">VolkswagenSuran/Fox 16v</option>
+                            <option value="amarok20(2014-)">Volkswagen Amarok 2.0 2014- </option>
+                            <option value="amarok20(2015>)">Volkswagen Amarok 2.0 2015+</option>
+                            <option value="gol14">Volkswagen Gol 1.4</option>
+                            <option value="gol16">Volkswagen Gol 1.6</option>
+                            <option value="golfmsi16">Volkswagen Golf MSI /Polo MSI /T-Cross 1.6 </option>
+                            <option value="golftsi14">Volkswagen Golf TSI /Vento TSI 1.4 </option>
+                            <option value="up10">Volkswagen Up 1.0</option>
+                            <option value="uppepper">Volkswagen Up Pepper</option>
+                            <option value="virtus16">Volkswagen Virtus 1.6</option>
+                            <option value="vento25">Wolkswagen Vento 2.5</option>
+                          </optgroup>  
+                        </select> 
+                      </div>                      
+                       <div class="col-md-4 col-4 col-sm-4 col-xl-4 contenedor_patente">
+                        <div class="form-floating contenedor_patente">
+                         <input type="text" class="form-control" id="floatingInputGrid" placeholder="patente" value="">
+                         <label for="floatingInputGrid" style="display: inline;"></label>                        
+                       </div>     
+                     </div>
+                   </div>
+                 </div>              
+               </div>                                     
+                <div class="contenedor_presupuesto  table-responsive-md" id="contenedor_presupuesto"> 
+                 <table class="table">         
+                  <tbody>
+                   <tr id="fila1">
+                   <th class="anchoColumna" scope="row">Lubricante</th>
+                   <td><img id="icono_elaion" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar">                    
+                    <button class="btn btn-primary" id="boton0">Agregar  </button></td>
+                   <td id="descripcion"></td>
+                   <td class="precio" id="precio" ></td>
+                   </tr>
+                   <tr id="fila2">
+                   <th scope="row">Lubricante</th>
+                   <td>
+                    <img id="icono_elaion1" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar1"> 
+                    <button class="btn btn-primary" id="boton1">Agregar </button> 
+                   </td>
+                   <td id="descripcion1"></td>
+                   <td class="precio" id="precio1" ></td>
+                   </tr>
+                   <tr id="fila3">
+                   <th scope="row">Lubricante</th>
+                   <td>
+                    <img id="icono_elaion2" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar2"> 
+                    <button class="btn btn-primary" id="boton2"> Agregar </button></td>
+                  </td>
+                  <td id="descripcion2"></td>
+                  <td class="precio" id="precio2" ></td>
+                  </tr>
+                  <tr id="fila4">
+                  <th scope="row">Otros</th>
+                  <td>
+                    <img id="icono_elaion3" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar3"> 
+                    <button class="btn btn-primary" id="boton3"> Agregar </button></td>
+                  </td>
+                  <td id="descripcion3"></td>
+                  <td class="precio" id="precio3" ></td>
+                  </tr>
+                  <tr id="fila5">
+                  <th scope="row">Filtro de Aceite </th> 
+                  <td>
+                    <img id="icono_aceite" class="icono_aceite" src="./img/faceite.ico" alt="">
+                    <input type="text" id="inputBuscar4"> 
+                    <button class="btn btn-primary" id="boton4">Agregar  </button></td>
+                  </td>
+                  <td id="descripcion4"></td>
+                  <td class="precio" id="precio4" ></td>
+                  </tr>
+                  <tr id="fila6">
+                  <th scope="row">Filtro de Aire</th>
+                <td>
+                  <img id="icono_aire" class="icono_aire" src="./img/faire.ico" alt=""><input type="text" id="inputBuscar5"> 
+                  <button class="btn btn-primary" id="boton5">Agregar </button>
+                </td>
+                </td>
+                <td id="descripcion5"></td>
+                <td class="precio" id="precio5" ></td>
+                </tr>
+                <tr id="fila7">
+                <th scope="row">Filtro de Combustible</th>
+                <td>
+                  <img id="icono_combustible" class="icono_combustible" src="./img/fcombustible.ico" alt="">
+                  <input type="text" id="inputBuscar6"> 
+                  <button class="btn btn-primary" id="boton6">Agregar </button></td>
+                </td>
+                <td id="descripcion6"></td>
+                <td class="precio" id="precio6"></td>
+                </tr>                                 
+                <tr>
+                <th >
+                  <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">
+                  
+                </th>
+                <th>
+                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary" id="boton7">Calcular Presupuesto</button>
+                </th>
+                <th class="texto_completo" >Servicio Completo</th>              
+                <th class="precio_completo"  id="sumaCompleto"></th>
+                <th></th>                   
+                </tr>
+                <td id="descripcion6"><img id="logo_escalonado" class="logo_escalonado border border-success-subtle" src="./img/promoescalonado.jpg" alt="" style="display:none;"></td>
+                <td id="precio6" ><img id="logo_cosmetica" class="logo_cosmetica border border-success-subtle" src="./img/cosmetica.jpg" alt="" style="display:none;"></td>
+                <th class="texto_premium">Servicio Premium</th>
+                <th class="precio_premium" id="sumaPremium"></th>                             
+            </tbody>
+          </table>
+        </div>
+         <div>
+          <input type="text" id="buscarInput" placeholder="Buscar por descripción">
+          <button id="boton8" class="btn btn-primary">Buscar</button> 
+          <ul id="resultados"></ul>
+        </div>    
+      </div> 
+       <div id="agregarProductos">
+        <button id="agregar-producto" class="btn btn-primary">Agregar Producto</button>
+       <div id="modal-agregar-producto">
+        <form id="formulario-agregar-producto">
+         <label for="codigo">Código:</label>
+         <input type="text" id="codigox" name="codigo">  
+         <label for="descripcion">Descripción:</label>
+         <input type="text" id="descripcionx" name="descripcion">   
+         <label for="precio">Precio:</label>
+         <input type="number" id="preciox" name="precio"> 
+        <button type="submit" class="btn btn-primary">Confirmar</button>
+      </form>  
+     </div>
+    </div>
+         <div class="container diagnosticos_contenedor" style="display:none;" id="diagnosticos_contenedor">   
+           <div class="row">
+            <div class="col border border-success-subtle">
+              <p class="completo_titulo1">   A. LUBRICANTES Y FILTROS </p>                         
+              <p class="nazul">01</p> Cambios de aceite y Filtro   <br>    
+              <p class="nazul">02</p> Reemplazo de filtro de aire  <br>
+              <p class="nazul">03</p> Revisión filtro de combustible <br>         
+              <p class="nazul">04</p> Revisión aceite caja de cambios <br>
+              <p class="nazul">05</p> Revisión aceite de <br>
+                transferencia <br>
+              <p class="nazul">06</p> Revision aceite diferencial <br>
+            </div>
+              <div class="col border border-success-subtle">
+                <p class="completo_titulo2">  B. FLUIDOS DEL VEHÍCULO </p>                   
+                <p class="nverde">07</p> Revisión de liquidos  <br>
+                  refrigerante y anticongelante <br>
+                  <br>
+                <p class="nverde">08</p> Revisión punto de  <br>
+                  congelamiento <br>
+                   <br>
+                <p class="nverde">09</p> Revisión del líquido de <br>
+                  dirección hidráulica <br>
+                  <br>
+                <p class="nverde">10</p> Revisión del liquido de frenos <br>
+                  <br>
+                <p class="nverde">11</p> Revisión de la batería<br>
+                  <br>
+                <p class="nverde">12</p> Revisión del líquido  <br>
+                 limpiaparabrisas 
+              </div>
+                <div class="col border border-success-subtle">
+                  <p class="completo_titulo3">   C. PARTES MECÁNICAS </p>                 
+                  <p class="nrojo">13</p> Revisión de guardapolvos y  
+                      holguras de transmisión <br> 
+                  <p class="nrojo">14</p> Revisión de correas: 
+                    alternador, aire 
+                    acondicionado y dirección 
+                    asistida <br>
+                  <p class="nrojo">15</p> Revisión de las mangueras <br>
+                  <p class="nrojo">16</p> Lubricación de bisagras y <br>
+                     retenedor de puertas <br> 
+                  <p class="nrojo">17</p> Revisión del caño de escape
+                      transferencia <br>
+                  <p class="nrojo">18</p> Control del tapón y arandela  
+                      del carter <br>
+                </div>
+                  <div class="col border border-success-subtle">
+                    <p class="completo_titulo4">  D. ELEMENTOS DE SEGURIDAD </p>
+                    <p class="namarillo">19</p>Pastillas y discos de freno <br>
+                    <p class="namarillo">20</p> Discos de freno<br>
+                    <p class="namarillo">21</p>Flexibles de frenos <br>
+                    <p class="namarillo">22</p> Amortiguadores <br>
+                    <p class="namarillo">23</p> Revisión y reposición de luces 
+                      exteriores y baúl <br>
+                    <p class="namarillo">24</p> Revisar y/o reemplazar  
+                      escobillas limpiaparabrisas <br>
+                    <p class="namarillo">25</p> Profundidad del dibujo y 
+                      ajuste de la presión de los 
+                      neumáticos <br>
+                    <p class="namarillo">26</p>Revisión tuerca neumáticos <br>
+                    <p class="namarillo">27</p>Chequeo de cinturones y trabas  
+                  </div>
+                    <div class="col-md-12 col-12 col-sm-12 col-xl-12 border border-success-subtle">
+                      <div class="descaner">E.DIAGNOSTICO ELECTRONICO (ESCANER) SERVICIO PREMIUM</div>
+                        <div class="container texto_escaner">
+                          <div class="row ">
+                              <div class="col">
+                                -Lectura de tensión de la Sonda <br> 
+                                 Lambda <br>                          
+                                -Lectura de Frenos ABS <br>
+                                -Airbag 
+                              </div>  
+                               <div class="col">
+                                 -Historial de Fallas <br>
+                                 -Lectora de Fallas Intrumental
+                              </div>  
+                                <div class="col">
+                                  -Lectura Climatización <br>
+                                  -Lectura de Sensores y Actuadores 
+                               </div>
+                                <div class="col">
+                                  - Lectura de Inyección <br>
+                                  - Reseteo Service
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                       </div>
+                     </div>  
+                   </div>    
+                  </div>
+                    <div class="border border-success-subtle" style="display:none;" id="contenedorCertificado"> 
+                    <p class="certificado"><b> El Servicio Completo y Premium con Elaion incluye Diagnóstico de 27 puntos, Certificado de Servicio y Producto, Base de datos con el Historial de su Vehículo  sin costo de mano de obra.(Presupuesto sujeto a modificaciones sin previo aviso)</b></p> 
+                  </div>          
+    </main>
+    <footer> 
+    </footer>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="./js/index.js"></script>
+</body>
+</html>
