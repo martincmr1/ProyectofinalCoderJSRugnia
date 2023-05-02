@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  
+  <script src="./js/jspdf.debug.js" defer></script>
+  <script src="./js/html2canvas.js" defer></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script src="https://kit.fontawesome.com/302e8bad55.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +22,9 @@
     <header>        
     </header>
     <main> 
-      <div class="container">
+      <div  class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-12 col-xl-12 border border-success-subtle">
+            <div class="col-8 col-lg-12 col-md-12 col-sm-12 col-12 col-xl-12 border border-success-subtle">
                 <div class="contenedor_logo row border border-success-subtle">
                     <div class="row">
                       <div class=" col-3 col-md-3 col-sm-3 col-xl-3">
@@ -78,10 +83,13 @@
                                  <option value="mobi">Fiat MOBI </option>
                                  <option value="torod">Fiat Toro Diesel</option>
                                  <option value="toron">Fiat Toro Nafta 1.8</option>
+                                 <option value="unofire">Fiat Uno fire </option>
+                                 <option value="nuevouno">Fiat Nuevo Uno </option>
                               </optgroup>
                               <optgroup label="FORD">
                                 <option value="ecosportrocam">Ford Fiesta /Ecosport Rocam 1.6</option>
                                 <option value="fiestakinetic">Ford Fiesta kinetic /Ecosport 1.6 16v /ka 1.6</option>
+                                <option value="ecosport20kinetic">Ford Ecosport 2.0 kinetic</option>
                                 <option value="focus2/31.6">Ford Focus II/III 1.6</option>
                                 <option value="focus2/2.0">Ford Focus II/III 2.0</option> 
                                 <option value="ka2rocam">Ford KA II 1.6 /1.0 ROCAM</option>
@@ -96,6 +104,9 @@
                               </optgroup>
                               <optgroup label="JEEP">
                                 <option value="renegadenafta">Jeep Renegade nafta</option>
+                              </optgroup>
+                              <optgroup label="NISSAN">
+                                <option value="tiida">Nissan Tiida</option>
                               </optgroup>
                           <optgroup label="PEUGEOT">
                             <option value="20716">Peugeot 207 1.6 16v /307 1.6 16v</option>
@@ -123,6 +134,8 @@
                           </optgroup>  
                           <optgroup label="Volkswagen">
                             <option value="goltrend">Volkswagen Gol Trend/Voyage 1.6</option>
+                            <option value="bora20">Volkswagen Bora 2.0</option>
+                            <option value="boratdi">Volkswagen Bora TDI</option>
                             <option value="suran8v">VolkswagenSuran/Fox 8v</option>
                             <option value="suran16v">VolkswagenSuran/Fox 16v</option>
                             <option value="amarok20(2014-)">Volkswagen Amarok 2.0 2014- </option>
@@ -350,12 +363,18 @@
                     <div class="border border-success-subtle" style="display:none;" id="contenedorCertificado"> 
                     <p class="certificado"><b> El Servicio Completo y Premium con Elaion incluye Diagnóstico de 27 puntos, Certificado de Servicio y Producto, Base de datos con el Historial de su Vehículo  sin costo de mano de obra.(Presupuesto sujeto a modificaciones sin previo aviso)</b></p> 
                   </div> 
-                  <div id="contenedorProductos"></div>         
-    </main>
+                  <div id="contenedorProductos"></div>   
+                 
     <footer> 
+      
+      <!--<button id="btnpdf">pasar pdf</button>  -->
+
     </footer>
+    
+
+   
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="./js/index.js"></script>
+      <script src="./js/index.js" defer></script>
 </body>
 </html>
