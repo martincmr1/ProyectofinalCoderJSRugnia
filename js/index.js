@@ -393,7 +393,7 @@ let campo4 = document.getElementById("inputBuscar3");
 let campo5 = document.getElementById("inputBuscar4");
 let campo6 = document.getElementById("inputBuscar5");
 let campo7 = document.getElementById("inputBuscar6");
-/*let campo8 = document.getElementById("inputBuscar7");*/
+let campo8 = document.getElementById("inputBuscar7");
 
 
 ////////////////ESTA FUNCION RECARGA LA PAGINA AL USAR EL SELECT PARA GENERAR UN NUEVO PRESUPUESTO
@@ -942,27 +942,53 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value = "18842";     
      recargarPagina()
      } 
-})
+    if (valor_select == "hilux28") {
+      campo1.value ="172695"; 
+      campo2.value ="172696";                            
+      campo5.value ="15143";
+      campo6.value ="15659"; 
+      recargarPagina() 
+    } 
+    if (valor_select == "c420") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";                            
+      campo5.value ="15067";
+      campo6.value ="18932";  
+      campo7.value ="15141"; 
+      recargarPagina()
+    } 
+    if (valor_select == "30720hdi") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";                            
+      campo5.value ="4011558076658";
+      campo6.value ="18202";  
+      campo7.value ="18536";
+      recargarPagina()
+    } 
+    if (valor_select == "30720n") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";                            
+      campo5.value ="15067";
+      campo6.value ="18932";  
+      campo7.value ="15141"; 
+      recargarPagina()
+    } 
+    if (valor_select == "march") {
+      campo1.value ="171795";                             
+      campo5.value ="18578";
+      campo6.value ="15510";   
+      recargarPagina()
+    } 
+    if (valor_select == "kangoodci") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";                            
+      campo5.value ="18624";
+      campo6.value ="18434";  
+      campo7.value ="15522"; 
+      recargarPagina()
+    } 
+  })
 
-window.onload = function() {
-  document.getElementById('btnpdf').addEventListener('click', function() {
-    var doc = new jsPDF('p', 'pt', 'letter');
-    var margin = 10;
-    var scale = (doc.internal.pageSize.width - margin * 2) / document.body.scrollWidth;
-    doc.html(document.body, {
-      x: margin,
-      y: margin,
-      html2canvas: {
-        scale: scale,
-      },
-      callback: function(doc) {
-        doc.output('dataurlnewwindow', {
-          filename: 'fichero-pdf.pdf'
-        });
-      }
-    });
-  });
-};
 
 
 
@@ -2046,13 +2072,7 @@ window.onload = function() {
 
 
 
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
@@ -2856,3 +2876,4 @@ window.onload = function() {
     
     
     
+  
