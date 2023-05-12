@@ -1143,7 +1143,7 @@ document.getElementById("autos").addEventListener('change', function() {
 
   
   function imprimirPagina() {
-    window.print();
+    window.print()
   }
   
 
