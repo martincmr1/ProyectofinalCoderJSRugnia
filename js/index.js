@@ -376,7 +376,7 @@ function sumarPrecios2() {
 }
 
 function sumatodo() {
-  let inputBuscar = document.getElementById("inputBuscar");
+ /* let inputBuscar = document.getElementById("inputBuscar");
   let inputBuscar1 = document.getElementById("inputBuscar1");
   let inputBuscar2 = document.getElementById("inputBuscar2");
   let inputBuscar3 = document.getElementById("inputBuscar3");
@@ -419,7 +419,7 @@ function sumatodo() {
   }
   if (inputBuscar3.value === "103799" || inputBuscar3.value === "103796" || inputBuscar3.value === "108099" || inputBuscar3.value === "108096") {
     iconoElaion3.src = "/img/f10.jpg";
-  }
+  }*/
   document.getElementById("boton0").click();
  document.getElementById("boton1").click();
  document.getElementById("boton2").click();
