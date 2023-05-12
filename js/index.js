@@ -385,40 +385,40 @@ function sumatodo() {
   let iconoElaion2 = document.getElementById("icono_elaion2");
   let iconoElaion3 = document.getElementById("icono_elaion3");
   if (inputBuscar.value === "103899" || inputBuscar.value ==="103896") {
-    iconoElaion.src = "../img/f30.jpg";
+    iconoElaion.src = "/img/f30.jpg";
   }
   if (inputBuscar.value === "104099" || inputBuscar.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296"){
-    iconoElaion.src = "../img/f50.jpg";
+    iconoElaion.src = "/img/f50.jpg";
   }
   if (inputBuscar.value === "103799" || inputBuscar.value === "103796" || inputBuscar.value === "108099" || inputBuscar.value === "108096") {
-    iconoElaion.src = "../img/f10.jpg";
+    iconoElaion.src = "/img/f10.jpg";
   }
   if (inputBuscar1.value === "103899" || inputBuscar1.value ==="103896") {
-    iconoElaion1.src = "../img/f30.jpg";
+    iconoElaion1.src = "/img/f30.jpg";
   }
   if (inputBuscar1.value === "104099" || inputBuscar1.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296") {
-    iconoElaion1.src = "../img/f50.jpg";
+    iconoElaion1.src = "/img/f50.jpg";
   }
   if (inputBuscar1.value === "103799" || inputBuscar1.value === "103796" || inputBuscar1.value === "108099" || inputBuscar1.value === "108096") {
-    iconoElaion1.src = "../img/f10.jpg";
+    iconoElaion1.src = "/img/f10.jpg";
   }
   if (inputBuscar2.value === "103899" || inputBuscar2.value ==="103896") {
-    iconoElaion2.src = "../img/f30.jpg";
+    iconoElaion2.src = "/img/f30.jpg";
   }
   if (inputBuscar2.value === "104099" || inputBuscar2.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296") {
-    iconoElaion2.src = "../img/f50.jpg";
+    iconoElaion2.src = "/img/f50.jpg";
   }
   if (inputBuscar2.value === "103799" || inputBuscar2.value === "103796" || inputBuscar2.value === "108099" || inputBuscar2.value === "108096") {
-    iconoElaion2.src = "../img/f10.jpg";
+    iconoElaion2.src = "/img/f10.jpg";
   }
   if (inputBuscar3.value === "103899" || inputBuscar3.value ==="103896") {
-    iconoElaion3.src = "../img/f30.jpg";
+    iconoElaion3.src = "/img/f30.jpg";
   }
   if (inputBuscar3.value === "104099" || inputBuscar3.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296") {
-    iconoElaion3.src = "../img/f50.jpg";
+    iconoElaion3.src = "/img/f50.jpg";
   }
   if (inputBuscar3.value === "103799" || inputBuscar3.value === "103796" || inputBuscar3.value === "108099" || inputBuscar3.value === "108096") {
-    iconoElaion3.src = "../img/f10.jpg";
+    iconoElaion3.src = "/img/f10.jpg";
   }
   document.getElementById("boton0").click();
  document.getElementById("boton1").click();
