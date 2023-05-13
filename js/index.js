@@ -1,12 +1,12 @@
 /////////////////////////////ARRAY DE PRODUCTOS SERVER///////////////////////////////////////////////////////////////////////////////
 /////////// Esta Funcion Solicita el array de PRODUCTOS de la api que cree en Google Firebase///////////////////////////////////////
 
-function verProductosapi() {
+/*function verProductosapi() {
   fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
     .then((response) => response.json())
     .then((jsonResponse) => {
       productosServer = jsonResponse;
-      let productosGuardados = localStorage.getItem('productos');
+     let productosGuardados = localStorage.getItem('productos');
       if (productosGuardados) {
         let productosJSON = JSON.parse(productosGuardados);
         productosJSON.forEach(producto => productos.push(producto));
@@ -19,12 +19,11 @@ let productos = [];
 let productosServer = [];
 
 verProductosapi();
+*/
 
 
 
-
-
-/*function verProductosapi() {
+function verProductosapi() {
  fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
  .then((response) => response.json())
  .then((jsonResponse) => {
@@ -34,7 +33,7 @@ verProductosapi();
 }
 let productos = [];
 let productosServer = [];
-verProductosapi();*/
+verProductosapi();
 
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
 const PREMIUM = 2500
@@ -70,7 +69,7 @@ botonCambiardireccion.addEventListener('click', () => {
     direccionElement.innerHTML = direccion1;
     document.getElementById("direccioninput").value = "";
     localStorage.setItem("direccion", direccion1);
-   recargarPagina()
+   refrescarPagina()
   }
 });
 
@@ -88,7 +87,7 @@ botonCambiarTelefono.addEventListener('click', () => {
     telefonoElement.innerHTML = telefono1;
     document.getElementById("telefonoinput").value = "";
     localStorage.setItem("telefono", telefono1);
-    recargarPagina()
+    refrescarPagina()
   }
 });
 
@@ -155,6 +154,8 @@ function mostrarToast4() {
   }).showToast();
 }
 /////////////FUNCIONES PARA STORAGE AGREGAR Y OBTENER//////////////////////////////////////////////////
+
+/*
 function agregarStorage() {
  let productosJSON = JSON.stringify(productos);
  localStorage.setItem("productos", productosJSON);
@@ -166,16 +167,16 @@ if (productosJSON) {
   productos = productosJSON;
 }}
 obtenerStorage()
-
+*/
 function limpiarLocalStorage() {
   localStorage.clear();
-  recargarPagina()
+  refrescarPagina()
 }
 
 
 
 ///////////////////////AGREGAR NUEVOS PRODUCTOS AL ARRAY ////////////////////////
-
+/*
 const botonAgregarProducto = document.getElementById('agregar-producto');
 const modalAgregarProducto = document.getElementById('modal-agregar-producto');
 botonAgregarProducto.addEventListener('click', () => {
@@ -193,7 +194,7 @@ modalAgregarProducto.style.display = 'none';
 formularioAgregarProducto.reset();
 agregarStorage()
 mostrarToast4()
-});    
+});    */
 //////////////////////////AGREGAR PRODUCTOS A LA TABLA (busca el código y devuelve precio y descripcion del array productos)/////////
 
 function buscarCoincidencia(){
@@ -439,11 +440,69 @@ function ocultarInputs() {
   document.getElementById("icono_aceite").style.display = "flex";
   document.getElementById("icono_combustible").style.display = "flex";
   document.getElementById("icono_aire").style.display = "flex";
-  document.getElementById("icono_elaion").style.display = "flex";
-  document.getElementById("icono_elaion1").style.display = "flex";
-  document.getElementById("icono_elaion2").style.display = "flex";
-  document.getElementById("icono_elaion3").style.display = "flex";
-  document.getElementById("agregarProductos").style.display = "none"; 
+  
+  let inputBuscar = document.getElementById("inputBuscar");
+  let inputBuscar1 = document.getElementById("inputBuscar1");
+  let inputBuscar2 = document.getElementById("inputBuscar2");
+  let inputBuscar3 = document.getElementById("inputBuscar3");
+  
+  if (inputBuscar.value === "103899" || inputBuscar.value ==="103896") {
+    document.getElementById("icono_elaionf30").style.display = "flex";    
+  }
+  else if (inputBuscar.value === "104099" || inputBuscar.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296"){
+    document.getElementById("icono_elaionf50").style.display = "flex"; 
+  }
+  else if (inputBuscar.value === "103799" || inputBuscar.value === "103796" || inputBuscar.value === "108099" || inputBuscar.value === "108096") {
+    document.getElementById("icono_elaionf10").style.display = "flex"; 
+  }else 
+  document.getElementById("icono_elaion").style.display = "flex"; 
+  
+  
+  
+  if (inputBuscar1.value === "103899" || inputBuscar1.value ==="103896") {
+    document.getElementById("icono_elaionf301").style.display = "flex";    
+  }
+  else if (inputBuscar1.value === "104099" || inputBuscar1.value ==="104096" || inputBuscar1.value === "193299" || inputBuscar1.value === "193296"){
+    document.getElementById("icono_elaionf501").style.display = "flex"; 
+  }
+  else if (inputBuscar1.value === "103799" || inputBuscar1.value === "103796" || inputBuscar1.value === "108099" || inputBuscar1.value === "108096") {
+    document.getElementById("icono_elaionf101").style.display = "flex"; 
+  }else 
+  document.getElementById("icono_elaion1").style.display = "flex"; 
+
+
+  if (inputBuscar2.value === "103899" || inputBuscar2.value ==="103896") {
+    document.getElementById("icono_elaionf302").style.display = "flex";    
+  }
+  else if (inputBuscar2.value === "104099" || inputBuscar2.value ==="104096" || inputBuscar2.value === "193299" || inputBuscar2.value === "193296"){
+    document.getElementById("icono_elaionf502").style.display = "flex"; 
+  }
+  else if (inputBuscar2.value === "103799" || inputBuscar2.value === "103796" || inputBuscar2.value === "108099" || inputBuscar2.value === "108096") {
+    document.getElementById("icono_elaionf102").style.display = "flex"; 
+  }else 
+  document.getElementById("icono_elaion2").style.display = "flex"; 
+
+ 
+ 
+  if (inputBuscar3.value === "103899" || inputBuscar3.value ==="103896") {
+    document.getElementById("icono_elaionf303").style.display = "flex";    
+  }
+  else if (inputBuscar3.value === "104099" || inputBuscar3.value ==="104096" || inputBuscar3.value === "193299" || inputBuscar3.value === "193296"){
+    document.getElementById("icono_elaionf503").style.display = "flex"; 
+  }
+  else if (inputBuscar3.value === "103799" || inputBuscar3.value === "103796" || inputBuscar3.value === "108099" || inputBuscar3.value === "108096") {
+    document.getElementById("icono_elaionf103").style.display = "flex"; 
+  }else 
+  document.getElementById("icono_elaion3").style.display = "flex"; 
+ 
+  
+
+
+
+ 
+
+ 
+  /*document.getElementById("agregarProductos").style.display = "none"; */
   document.getElementById("logo_aca").style.display = "flex"; 
   document.getElementById("logo_credito").style.display = "flex"; 
   document.getElementById("logo_escalonado").style.display = "flex"; 
@@ -1012,11 +1071,12 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value = "18842";     
      recargarPagina()
      } 
-    if (valor_select == "hilux28") {
+    if (valor_select == "hilux24") {
       campo1.value ="172695"; 
       campo2.value ="172696";                            
       campo5.value ="15143";
-      campo6.value ="15659"; 
+      campo6.value ="15659";
+      campo7.value ="4011558338503" 
       recargarPagina() 
     } 
     if (valor_select == "c420") {
@@ -1092,6 +1152,21 @@ document.getElementById("autos").addEventListener('change', function() {
       campo5.value ="18486";
       campo6.value ="4011558744502"; 
       campo7.value ="4011558055783"; 
+      recargarPagina()
+    } 
+    if (valor_select == "ventodiesel") {
+      campo1.value ="172795";
+      campo2.value ="172796";                
+      campo5.value ="18492";
+      campo6.value ="15065"; 
+      campo7.value ="18938"; 
+      recargarPagina()
+    } 
+    if (valor_select == "aveog1") {
+      campo1.value ="171795";                
+      campo5.value ="4011558744502";
+      campo6.value ="18959"; 
+      campo7.value ="15351"; 
       recargarPagina()
     } 
     

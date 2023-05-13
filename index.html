@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <script src="html2pdf.js"></script>
+  <!--<script src="html2pdf.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -66,6 +66,7 @@
                                   <option value="tracker12">Chevrolet Tracker 1.2 /Onix 1.2</option>
                                   <option value="tracker18">Chevrolet Tracker 1.8</option>
                                   <option value="meriva18">Chevrolet Meriva 1.8</option>
+                                  <option value="aveog1">Chevrolet Aveo G1</option> 
                                   <option value="aveog3">Chevrolet Aveo G3</option>
                                   <option value="cruze18">Chevrolet Cruze 1.8 16v</option>
                                   <option value="cruze14">Chevrolet Cruze 1.4</option>
@@ -143,8 +144,8 @@
                           <optgroup label="TOYOTA">
                             <option value="etios">Toyota Etios / Yaris </option>
                             <option value="corolla2011">Toyota Corolla 2011+</option>
-                            <option value="hilux30">Toyoya Hilux 3.0</option> 
-                            <option value="hilux28">Toyoya Hilux 2.8 2015+</option>
+                            <option value="hilux30">Toyoya Hilux 3.0 / 2.5 D4D</option> 
+                            <option value="hilux24">Toyoya Hilux 2.4 TDI 2015+</option>
                           </optgroup>  
                           <optgroup label="Volkswagen">
                             <option value="goltrend">Volkswagen Gol Trend/Voyage 1.6</option>
@@ -161,6 +162,7 @@
                             <option value="up10">Volkswagen Up 1.0</option>
                             <option value="uppepper">Volkswagen Up Pepper / Nivus</option>
                             <option value="virtus16">Volkswagen Virtus 1.6</option>
+                            <option value="ventodiesel">Volkswagen Vento Diesel </option>
                             <option value="vento25">Wolkswagen Vento 2.5</option>
                           </optgroup>  
                         </select> 
@@ -179,7 +181,7 @@
                   <tbody>
                    <tr id="fila1">
                    <th class="anchoColumna" scope="row">Lubricante</th>
-                   <td><img id="icono_elaion" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar">                    
+                   <td><img id="icono_elaion" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf10" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf30" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf50" class="icono_elaion" src="./img/f50.jpg" alt=""><input type="text" id="inputBuscar">                    
                     <button class="btn btn-primary" id="boton0">Agregar  </button></td>
                    <td id="descripcion"></td>
                    <td class="precio" id="precio" ></td>
@@ -187,7 +189,7 @@
                    <tr id="fila2">
                    <th scope="row">Lubricante</th>
                    <td>
-                    <img id="icono_elaion1" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar1"> 
+                    <img id="icono_elaion1" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf101" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf301" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf501" class="icono_elaion" src="./img/f50.jpg" alt=""> <input type="text" id="inputBuscar1"> 
                     <button class="btn btn-primary" id="boton1">Agregar </button> 
                    </td>
                    <td id="descripcion1"></td>
@@ -196,7 +198,7 @@
                    <tr id="fila3">
                    <th scope="row">Lubricante</th>
                    <td>
-                    <img id="icono_elaion2" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar2"> 
+                    <img id="icono_elaion2" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf102" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf302" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf502" class="icono_elaion" src="./img/f50.jpg" alt=""><input type="text" id="inputBuscar2"> 
                     <button class="btn btn-primary" id="boton2"> Agregar </button></td>
                   </td>
                   <td id="descripcion2"></td>
@@ -205,7 +207,7 @@
                   <tr id="fila4">
                   <th scope="row">Otros</th>
                   <td>
-                    <img id="icono_elaion3" class="icono_elaion" src="./img/elaion.ico" alt=""><input type="text" id="inputBuscar3"> 
+                    <img id="icono_elaion3" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf103" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf303" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf503" class="icono_elaion" src="./img/f50.jpg" alt=""> <input type="text" id="inputBuscar3"> 
                     <button class="btn btn-primary" id="boton3"> Agregar </button></td>
                   </td>
                   <td id="descripcion3"></td>
@@ -246,7 +248,7 @@
                   <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">  
                 </th>
                 <th>
-                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary" id="boton7">Calcular Presupuesto</button>
+                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-danger" id="boton7">Calcular Presupuesto</button>
                 </th>
                 <th class="texto_completo" >Servicio Completo</th>              
                 <th class="precio_completo"  id="sumaCompleto"></th>
@@ -265,7 +267,7 @@
           <ul id="resultados"></ul>
         </div>    
       </div> 
-      <div>
+     <!-- <div>
        <div id="agregarProductos">
         <button id="agregar-producto" class="btn btn-primary">Agregar nuevo producto</button>
        <div id="modal-agregar-producto">
@@ -279,14 +281,14 @@
         <button type="submit" class="btn btn-primary">Confirmar Producto</button>      
       </form>  
      </div>
-    </div>
-    <div>
+    </div> -->
+    <div class="contenedorCambio">
     <input type="text" id="direccioninput">
-    <button class="btn btn-primary" id="boton10">Confirmar nueva dirección </button>
+    <button class="btn btn-success" id="boton10">Confirmar nueva dirección </button>
   </div>
   <div>
     <input type="text" id="telefonoinput">
-    <button class="btn btn-primary" id="boton11">Confirmar nuevo Teléfono </button>
+    <button class="btn btn-success" id="boton11">Confirmar nuevo Teléfono </button>
   </div>
   <div id="contenedorBtnLimpiarStorage">
       <button id="boton9"  type="submit" class="btn btn-secondary">Eliminar Datos</button>
