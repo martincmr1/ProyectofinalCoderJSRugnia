@@ -1169,6 +1169,14 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value ="15351"; 
       recargarPagina()
     } 
+    if (valor_select == "merivad") {
+      campo1.value ="104099"; 
+      campo2.value ="104096";           
+      campo5.value ="15124";
+      campo6.value ="4011558075606"; 
+      campo7.value ="4011558055783"; 
+      recargarPagina()
+    } 
     
   })
 
