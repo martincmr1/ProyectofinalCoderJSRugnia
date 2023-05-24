@@ -1177,6 +1177,46 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value ="4011558055783"; 
       recargarPagina()
     } 
+    if (valor_select == "jumpy") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";    
+      campo3.value ="172996";     
+      campo5.value ="4011558067465";
+      campo6.value ="4011558060053"; 
+      campo7.value ="4011558077464"; 
+      recargarPagina()
+    } 
+    if (valor_select == "palio18") {
+      campo1.value ="104099";     
+      campo5.value ="4011558744502";
+      campo6.value ="18226"; 
+      campo7.value ="18711"; 
+      recargarPagina()
+    } 
+    if (valor_select == "paliodiesel") {
+      campo1.value ="103899";   
+      campo2.value ="103896";
+      campo5.value ="18602";
+      campo6.value ="18226"; 
+      campo7.value ="18812"; 
+      recargarPagina()
+    } 
+    if (valor_select == "s10mwm") {
+      campo1.value ="104099";   
+      campo2.value ="104099";
+      campo5.value ="18570";
+      campo6.value ="18040"; 
+      campo7.value ="15142"; 
+      recargarPagina()
+    }
+    if (valor_select == "compass24") {
+      campo1.value ="171895";   
+      campo2.value ="171896";
+      campo5.value ="15507";
+      campo6.value ="4011558088132"; 
+      campo7.value ="4011558621636"; 
+      recargarPagina()
+    } 
     
   })
 
