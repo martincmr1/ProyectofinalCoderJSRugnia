@@ -118,7 +118,8 @@
                                 <option value="fit15">Honda Fit 1.5 / City</option>
                               </optgroup>
                               <optgroup label="JEEP">
-                                <option value="renegadenafta">Jeep Renegade nafta</option>
+                                <option value="renegadenafta">Jeep Renegade 1.8 NAFTA</option>
+                                <option value="renegadediesel">Jeep Renegade 2.0 DIESEL</option>
                                 <option value="compass24">Jeep Compass 2.4</option>
                               </optgroup>
                               <optgroup label="NISSAN">
@@ -139,11 +140,13 @@
                             <option value="30816hdi">Peugeot 308 1.6 hdi / 408 1.6 hdi</option>
                           </optgroup> 
                           <optgroup label="RENAULT">
-                            <option value="clio12">Renault Clio 1.2 </option>
+                            <option value="clio12">Renault Clio 1.2 / MIO </option>
+                            <option value="capture16">Renault Capture 1.6 </option>
                             <option value="oroch20">Renault Oroch 2.0 / Duster 2.0 / Capture 2.0</option>
-                            <option value="kangoon">Renault Kangoo / Duster / Symbol / Sandero / Clio 1.6 16v </option>
+                            <option value="kangoon">Renault Kangoo / Logan / Duster / Symbol / Sandero / Clio 1.6 16v </option>
                             <option value="kangoodci">Renault Kangoo DCI / Clio DCI 1.5 </option>
-                            <option value="sandero8v">Renault Sandero 8v </option>
+                            <option value="kangoo19">Renault Kangoo 1.9 diesel </option>
+                            <option value="sandero8v">Renault Sandero 8v / Logan 8v</option>
                             <option value="kangoostepwayn">Renault Kangoo Steepway Nafta </option>
                             <option value="kwid">Renault Kwid</option>
                           </optgroup>  
@@ -161,11 +164,16 @@
                             <option value="suran16v">VolkswagenSuran/Fox 16v</option>
                             <option value="amarok20(2014-)">Volkswagen Amarok 2.0 2014- </option>
                             <option value="amarok20(2015>)">Volkswagen Amarok 2.0 2015+</option>
+                            <option value="amarokv6">Volkswagen Amarok 3.0 V6</option>
                             <option value="gol14">Volkswagen Gol 1.4</option>
                             <option value="gol16">Volkswagen Gol 1.6</option>
                             <option value="golfmsi16">Volkswagen Golf MSI /Polo MSI /T-Cross 1.6 </option>
                             <option value="golftsi14">Volkswagen Golf TSI /Vento TSI 1.4 </option>
                             <option value="up10">Volkswagen Up 1.0</option>
+                            <option value="polo16">Volkswagen Polo 1.6 generación 1</option>
+                            <option value="poloindia">Volkswagen Polo 1.6 (INDIA)</option>
+                            <option value="polo19">Volkswagen Polo 1.9 diesel</option>
+                            <option value="polo19tdi">Volkswagen Polo 1.9 TDI</option>
                             <option value="uppepper">Volkswagen Up Pepper / Nivus</option>
                             <option value="virtus16">Volkswagen Virtus 1.6</option>
                             <option value="ventodiesel">Volkswagen Vento Diesel </option>
@@ -190,7 +198,7 @@
                    <td><img id="icono_elaion" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf10" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf30" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf50" class="icono_elaion" src="./img/f50.jpg" alt=""><input type="text" id="inputBuscar">                    
                     <button class="btn btn-primary" id="boton0">Agregar  </button></td>
                    <td id="descripcion"></td>
-                   <td class="precio" id="precio" ></td>
+                   <td class="precio" id="precio"></td>
                    </tr>
                    <tr id="fila2">
                    <th scope="row">Lubricante</th>
@@ -401,7 +409,23 @@
 
     </footer>
     
+    <script>
+      function copyToClipboard(value) {
+  navigator.clipboard.writeText(value);
+  
+  Toastify({
+    text: "¡Código copiado al portapapeles!",
+    duration: 1000, // Duración en milisegundos
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // Posición de la notificación
+    position: "left", // Posición de la notificación
+    backgroundColor: "linear-gradient(to right, #0D39C1  , #092EA2)", // Color de fondo de la notificación
+    stopOnFocus: true,
+  }).showToast();
+}
 
+    </script>
    
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

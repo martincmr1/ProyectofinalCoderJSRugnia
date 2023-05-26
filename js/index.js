@@ -96,7 +96,7 @@ botonCambiarTelefono.addEventListener('click', () => {
 function mostrarToast() {
   Toastify({
     text: "Producto Agregado",
-    duration: 300,
+    duration: 400,
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     gravity: "top", 
@@ -111,7 +111,7 @@ function mostrarToast() {
 function mostrarToasttotal() {
   Toastify({
     text: "Calculando presupuesto",
-    duration: 300,
+    duration: 500,
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     gravity: "top", 
@@ -171,6 +171,7 @@ obtenerStorage()
 function limpiarLocalStorage() {
   localStorage.clear();
   refrescarPagina()
+  mostrarToast3()
 }
 
 
@@ -209,6 +210,8 @@ function buscarCoincidencia(){
      }else
     document.getElementById ('precio').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia1(){
  const codigo = document.getElementById("inputBuscar1").value
  const producto = productos.find(p => p.codigo === codigo);
@@ -221,6 +224,8 @@ function buscarCoincidencia1(){
    }else   
    document.getElementById ('precio1').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia2(){
  const codigo = document.getElementById("inputBuscar2").value
  const producto = productos.find(p => p.codigo === codigo);
@@ -233,6 +238,8 @@ function buscarCoincidencia2(){
    }else 
   document.getElementById ('precio2').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia3(){
  const codigo = document.getElementById("inputBuscar3").value
  const producto = productos.find(p => p.codigo === codigo);
@@ -245,6 +252,8 @@ function buscarCoincidencia3(){
    }else
    document.getElementById ('precio3').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia4(){
  const codigo = document.getElementById("inputBuscar4").value
  const producto = productos.find(p => p.codigo === codigo);  
@@ -257,6 +266,8 @@ function buscarCoincidencia4(){
    }else  
    document.getElementById ('precio4').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia5(){
  const codigo = document.getElementById("inputBuscar5").value
  const producto = productos.find(p => p.codigo === codigo);
@@ -269,6 +280,8 @@ function buscarCoincidencia5(){
    }else  
    document.getElementById ('precio5').innerHTML=producto.precio
 }
+
+
 function buscarCoincidencia6(){
  const codigo = document.getElementById("inputBuscar6").value
  const producto = productos.find(p => p.codigo === codigo);
@@ -388,7 +401,7 @@ function sumatodo() {
  sumarPrecios2();
  setTimeout (() => {
   imprimirPagina()
-},2000)
+},1000)
   
 }
 
@@ -400,7 +413,18 @@ function buscarDescripcion() {
   const busqueda = document.getElementById('buscarInput').value.toLowerCase();
   for (let i = 0; i < productos.length; i++) {
     if (productos[i].descripcion.toLowerCase().includes(busqueda)) {
-      resultados.push(`<li>${productos[i].codigo} - ${productos[i].descripcion}</li>`);
+ //     resultados.push(`<li>${productos[i].codigo} - ${productos[i].descripcion} -$ ${productos[i].precio} </li>`);
+ 
+
+// resultados.push(`<li class="list-group-item list-group-item-primary">${productos[i].codigo} - ${productos[i].descripcion} - $ ${productos[i].precio} </li>`);
+resultados.push(`
+  <li class="list-group-item list-group-item-primary">
+    <button class="btn btn-primary" onclick="copyToClipboard('${productos[i].codigo}')">${productos[i].codigo}</button>
+    - ${productos[i].descripcion} - $ ${productos[i].precio}
+  </li>
+`);
+
+ 
     }
   }
   document.getElementById('resultados').innerHTML = resultados.join('');
@@ -1217,7 +1241,66 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value ="4011558621636"; 
       recargarPagina()
     } 
-    
+    if (valor_select == "polo16") {
+      campo1.value ="103899";   
+      campo5.value ="18622";
+      campo6.value ="18288"; 
+      campo7.value ="18712"; 
+      recargarPagina()
+    } 
+    if (valor_select == "polo19") {
+      campo1.value ="103899";   
+      campo5.value ="18683";
+      campo6.value ="18289"; 
+      campo7.value ="18821"; 
+      recargarPagina()
+    } 
+    if (valor_select == "polo19tdi") {
+      campo1.value ="172795";   
+      campo5.value ="18498";
+      campo6.value ="18420"; 
+      campo7.value ="18800"; 
+      recargarPagina()
+    } 
+    if (valor_select == "poloindia") {
+      campo1.value ="172795";   
+      campo5.value ="15497";
+      campo6.value ="16251"; 
+      campo7.value ="18942"; 
+      recargarPagina()
+    } 
+    if (valor_select == "capture16") {
+      campo1.value ="172995"; 
+      campo2.value ="172996";
+      campo5.value ="18578";
+      campo6.value ="16252"; 
+      campo7.value ="15141"; 
+      recargarPagina()
+    } 
+    if (valor_select == "amarokv6") {
+      campo1.value ="172795";
+      campo2.value = "172795";
+      campo5.value = "4011558056841";
+      campo6.value = "15169";
+      campo7.value = "4011558819705";
+      recargarPagina()
+    }
+    if (valor_select == "kangoo19") {
+      campo1.value ="103899";
+      campo2.value = "103896";
+      campo5.value = "18624";
+      campo6.value = "15650";
+      campo7.value = "15163";
+      recargarPagina()
+    }
+    if (valor_select == "renegadediesel") {
+      campo1.value ="172695";
+      campo2.value ="172696";
+      campo5.value = "16229";
+      campo6.value = "4011558088132";
+      campo7.value = "16234";
+      recargarPagina()
+     }
   })
 
   
