@@ -1301,6 +1301,74 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value = "16234";
       recargarPagina()
      }
+     if (valor_select == "bronco15") {
+      campo1.value ="170995";
+      campo2.value ="170996";
+      campo3.value ="170996";
+      campo5.value = "4011558044220";
+      
+      recargarPagina()
+     }
+     if (valor_select == "bronco20") {
+      campo1.value ="171895";
+      campo2.value ="171896";
+      campo3.value ="171896";
+      campo5.value ="15400";
+      recargarPagina()
+     }
+     if (valor_select == "kicks") {
+      campo1.value ="171795";
+      campo3.value ="18578";
+      recargarPagina()
+     }
+     if (valor_select == "note") {
+      campo1.value ="171795";
+      campo3.value ="18578";
+      campo4.value ="15165";
+      recargarPagina()
+     }
+     if (valor_select == "208iivti") {
+      campo1.value ="172995";
+      campo3.value ="15067";
+      recargarPagina()
+     }
+     if (valor_select == "20719d") {
+      campo1.value ="103899";
+      campo2.value ="103896";
+      campo5.value = "4011558076658";
+      campo6.value = "15139";
+      campo7.value = "18533";
+      recargarPagina()
+     }
+     if (valor_select == "cactusthp") {
+      campo1.value ="172895";
+      campo2.value ="172896";
+      campo5.value = "15067";
+      campo6.value = "15392";
+      recargarPagina()
+     }
+     if (valor_select == "taos") {
+      campo1.value ="172795";
+      campo2.value ="172796";
+      campo5.value = "15502";
+      campo6.value = "15552";
+      recargarPagina()
+     }
+     if (valor_select == "gol19") {
+      campo1.value ="103899";
+      campo5.value = "18683";
+      campo6.value = "18311";
+      campo7.value = "18819";
+      recargarPagina()
+     }
+     if (valor_select == "ranger25") {
+      campo1.value ="171895";
+      campo2.value ="171896";
+      campo5.value = "15442";
+      campo6.value = "15420";
+      campo7.value = "18726";
+      recargarPagina()
+     }
   })
 
   

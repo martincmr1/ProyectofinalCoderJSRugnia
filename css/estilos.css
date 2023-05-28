@@ -200,6 +200,7 @@
 .contenedorCambio {
   padding-bottom: 1rem;
 }
+
 @media print {
         body {
           width: 21cm;
