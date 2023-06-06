@@ -197,9 +197,10 @@
 .precio {
  text-align: right;       
 }
-.contenedorCambio {
+/*.contenedorCambio {
   padding-bottom: 1rem;
 }
+*/
 
 @media print {
         body {

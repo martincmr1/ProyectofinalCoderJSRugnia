@@ -91,6 +91,15 @@ botonCambiarTelefono.addEventListener('click', () => {
   }
 });
 
+////////////BLOQUEAR SELECT///////////////////////////////////////////////////////
+function bloquearSelect() {
+  var selectElement = document.getElementById('autos');
+  selectElement.disabled = true;
+  selectElement.style.backgroundColor = '#ffffff'; // Cambia el color de fondo a blanco
+}
+
+
+
 
 //////////////////////////////MOSTRAR TOAST AL AGREGAR PRODUCTOS, CALCULAR PRESUPUESTO Y ELIMINAR STORAGE///////////////////////////////////////////////////////
 function mostrarToast() {
@@ -399,6 +408,7 @@ function sumatodo() {
  document.getElementById("boton6").click();
  sumarPrecios1();
  sumarPrecios2();
+ bloquearSelect()
  setTimeout (() => {
   imprimirPagina()
 },1000)
@@ -446,6 +456,8 @@ function ocultarBotones(){
   document.getElementById("contenedorBtnLimpiarStorage").style.display = "none";
   document.getElementById("boton10").style.display = "none";
   document.getElementById("boton11").style.display = "none";
+  document.getElementById("servicioCompleto").style.display = "block";
+  document.getElementById("servicioPremium").style.display = "block";
 
 } 
 function ocultarInputs() {
@@ -1373,7 +1385,48 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value = "18726";
       
      }
+     if (valor_select == "civicvtec") {
+      campo1.value ="170995";
+      campo5.value = "18572";
+      campo6.value = "15127";     
+     }
+     if (valor_select == "3008thp") {
+      campo1.value ="172895";
+      campo2.value ="172896";
+      campo5.value = "15067";
+      campo6.value = "15392";
+      campo7.value ="15141";
+     }
+     if (valor_select == "raptor") {
+      campo1.value ="171895";
+      campo2.value ="171895";
+      campo5.value = "15404";
+      
+     }
+     if (valor_select == "alaskan") {
+      campo1.value ="172895";
+      campo2.value ="172895";
+      campo5.value = "16270";
+      campo6.value = "4011558041311";
+      campo7.value = "4011558064822";
+     }
+     if (valor_select == "fluence16k4m") {
+      campo1.value ="172995";
+      campo2.value ="172996";
+      campo5.value = "18624";
+      campo6.value = "15362";
+      campo7.value = "15141";
+     }
+     if (valor_select == "fluence20") {
+      campo1.value ="172995";
+      campo2.value ="172996";
+      campo5.value = "18578";
+      campo6.value = "15362";
+      campo7.value = "15141";
+     }
   })
+
+
 
   
   function imprimirPagina() {
