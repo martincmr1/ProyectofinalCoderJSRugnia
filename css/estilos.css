@@ -4,7 +4,7 @@
  box-sizing: border-box;
 }
 #floatingInputGrid {
- width: 160px;
+ width: 250px;
  height: 15px;
  display: inline;               
 }
@@ -34,7 +34,7 @@
 }  
 .appypf_logo {
  height: 25px;
- padding-left: 2rem;
+ 
 }          
 .logo_boxes {
  height: 30px; 
@@ -48,16 +48,24 @@
  height: 25px;
 }        
 .texto_completo {
+
  font-size: 15px;
  text-align: center;
+ 
 }
 .texto_premium {
+
  font-size: 15px;
  text-align: center;
+ 
 }
 .precio_completo {
- font-size: 15px;
+
+  font-size: 15px;
  text-align: right;
+ 
+ 
+ 
 }   
 .precio_premium {
  font-size: 15px;
@@ -72,6 +80,7 @@
 .datos_contacto {
  text-align: start;
  font-size: 13px;
+
 }
 .descaner { 
  background-color: rgb(97, 153, 199);           
@@ -170,11 +179,13 @@
  height: 45px;
  margin-left: 2rem;
  width: 65px;
+
 }
 .logo_escalonado {
  height: 45px;
  margin-left: 2rem;
  width: 65px;
+
 }
 .logo_cosmetica {
  height: 45px;
@@ -201,6 +212,7 @@
   padding-bottom: 1rem;
 }
 */
+
 
 @media print {
         body {
