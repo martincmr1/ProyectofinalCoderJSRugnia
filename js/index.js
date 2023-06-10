@@ -1424,6 +1424,19 @@ document.getElementById("autos").addEventListener('change', function() {
       campo6.value = "15362";
       campo7.value = "15141";
      }
+     if (valor_select == "escortzetec") {
+      campo1.value ="171895";
+      campo5.value = "18617";
+      campo6.value = "18234";
+      campo7.value = "18775";
+     }
+     if (valor_select == "escortendura") {
+      campo1.value ="103899";
+      campo2.value ="103896";
+      campo5.value = "18604";
+      campo6.value = "18234";
+      campo7.value = "18527";
+     }
   })
 
 
