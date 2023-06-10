@@ -399,6 +399,7 @@ function sumarPrecios2() {
 }
 
 function sumatodo() {
+  agregarFechayhora()
   document.getElementById("boton0").click();
  document.getElementById("boton1").click();
  document.getElementById("boton2").click();
@@ -649,6 +650,7 @@ document.getElementById("autos").addEventListener('change', function() {
   }
   if (valor_select == "golfmsi16") {
     campo1.value ="172795";
+    campo2.value ="172796";
     campo5.value = "15502";
     campo6.value = "15979";
     
@@ -1436,6 +1438,11 @@ document.getElementById("autos").addEventListener('change', function() {
       campo5.value = "18604";
       campo6.value = "18234";
       campo7.value = "18527";
+     }
+     if (valor_select == "spark12") {
+      campo1.value ="171795";
+      campo5.value = "15609";
+      campo6.value = "15496";
      }
   })
 
