@@ -1192,7 +1192,7 @@ document.getElementById("autos").addEventListener('change', function() {
       campo2.value ="104096"; 
       campo3.value ="104096";               
       campo5.value ="18486";
-      campo6.value ="4011558744502"; 
+      campo6.value ="15529"; 
       campo7.value ="4011558055783"; 
       
     } 
