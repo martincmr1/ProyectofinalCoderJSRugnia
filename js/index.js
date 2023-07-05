@@ -483,51 +483,63 @@ function ocultarInputs() {
   let inputBuscar2 = document.getElementById("inputBuscar2");
   let inputBuscar3 = document.getElementById("inputBuscar3");
   
-  if (inputBuscar.value === "103899" || inputBuscar.value ==="103896"|| inputBuscar.value === "176395" || inputBuscar.value === "176396") {
+  if (inputBuscar.value === "103899" || inputBuscar.value ==="103896") {
     document.getElementById("icono_elaionf30").style.display = "flex";    
   }
-  else if (inputBuscar.value === "104099" || inputBuscar.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296"|| inputBuscar.value === "176095" || inputBuscar.value === "176096"|| inputBuscar.value === "176195" || inputBuscar.value === "176196"){
+  else if (inputBuscar.value === "176395" || inputBuscar.value ==="176396"|| inputBuscar.value === "174495" || inputBuscar.value === "174496"|| inputBuscar.value === "174195" || inputBuscar.value === "174196"|| inputBuscar.value === "176095" || inputBuscar.value === "176096"|| inputBuscar.value === "176195" || inputBuscar.value === "176196" ){
+    document.getElementById("icono_elaionfs50").style.display = "flex"; 
+  }
+  else if (inputBuscar.value === "104099" || inputBuscar.value ==="104096" || inputBuscar.value === "193299" || inputBuscar.value === "193296"){
     document.getElementById("icono_elaionf50").style.display = "flex"; 
   }
-  else if (inputBuscar.value === "103799" || inputBuscar.value === "103796" || inputBuscar.value === "108099" || inputBuscar.value === "108096"  || inputBuscar.value === "174495" || inputBuscar.value === "174496"|| inputBuscar.value === "174195" || inputBuscar.value === "174196") {
+  else if (inputBuscar.value === "103799" || inputBuscar.value === "103796" || inputBuscar.value === "108099" || inputBuscar.value === "108096"  ) {
     document.getElementById("icono_elaionf10").style.display = "flex"; 
   }else 
   document.getElementById("icono_elaion").style.display = "flex"; 
   
   
   
-  if (inputBuscar1.value === "103899" || inputBuscar1.value ==="103896"|| inputBuscar1.value === "176395" || inputBuscar1.value === "176396") {
+  if (inputBuscar1.value === "103899" || inputBuscar1.value ==="103896") {
     document.getElementById("icono_elaionf301").style.display = "flex";    
   }
-  else if (inputBuscar1.value === "104099" || inputBuscar1.value ==="104096" || inputBuscar1.value === "193299" || inputBuscar1.value === "193296"|| inputBuscar1.value === "176095" || inputBuscar1.value === "176096"|| inputBuscar1.value === "176195" || inputBuscar1.value === "176196"){
+  else if (inputBuscar1.value === "176395" || inputBuscar1.value ==="176396" || inputBuscar1.value === "174195" || inputBuscar1.value === "174196"|| inputBuscar1.value === "174495" || inputBuscar1.value === "174496"|| inputBuscar1.value === "176095" || inputBuscar1.value === "176096"|| inputBuscar1.value === "176195" || inputBuscar1.value === "176196"){
+    document.getElementById("icono_elaionfs501").style.display = "flex"; 
+  }
+  else if (inputBuscar1.value === "104099" || inputBuscar1.value ==="104096" || inputBuscar1.value === "193299" || inputBuscar1.value === "193296"){
     document.getElementById("icono_elaionf501").style.display = "flex"; 
   }
-  else if (inputBuscar1.value === "103799" || inputBuscar1.value === "103796" || inputBuscar1.value === "108099" || inputBuscar1.value === "108096"|| inputBuscar1.value === "174195" || inputBuscar1.value === "174196"|| inputBuscar1.value === "174495" || inputBuscar1.value === "174496") {
+  else if (inputBuscar1.value === "103799" || inputBuscar1.value === "103796" || inputBuscar1.value === "108099" || inputBuscar1.value === "108096") {
     document.getElementById("icono_elaionf101").style.display = "flex"; 
   }else 
   document.getElementById("icono_elaion1").style.display = "flex"; 
 
 
-  if (inputBuscar2.value === "103899" || inputBuscar2.value ==="103896"|| inputBuscar2.value === "176395" || inputBuscar2.value === "176396") {
+  if (inputBuscar2.value === "103899" || inputBuscar2.value ==="103896") {
     document.getElementById("icono_elaionf302").style.display = "flex";    
   }
-  else if (inputBuscar2.value === "104099" || inputBuscar2.value ==="104096" || inputBuscar2.value === "193299" || inputBuscar2.value === "193296"|| inputBuscar2.value === "176095" || inputBuscar2.value === "176096"|| inputBuscar2.value === "176195" || inputBuscar2.value === "176196"){
+  else if (inputBuscar2.value === "176395" || inputBuscar2.value ==="176396"|| inputBuscar2.value === "174195" || inputBuscar2.value === "174196"|| inputBuscar2.value === "174495" || inputBuscar2.value === "174496"|| inputBuscar2.value === "176095" || inputBuscar2.value === "176096"|| inputBuscar2.value === "176195" || inputBuscar2.value === "176196" ){
+    document.getElementById("icono_elaionfs502").style.display = "flex"; 
+  }
+  else if (inputBuscar2.value === "104099" || inputBuscar2.value ==="104096" || inputBuscar2.value === "193299" || inputBuscar2.value === "193296"){
     document.getElementById("icono_elaionf502").style.display = "flex"; 
   }
-  else if (inputBuscar2.value === "103799" || inputBuscar2.value === "103796" || inputBuscar2.value === "108099" || inputBuscar2.value === "108096"|| inputBuscar2.value === "174195" || inputBuscar2.value === "174196"|| inputBuscar2.value === "174495" || inputBuscar2.value === "174496" ) {
+  else if (inputBuscar2.value === "103799" || inputBuscar2.value === "103796" || inputBuscar2.value === "108099" || inputBuscar2.value === "108096" ) {
     document.getElementById("icono_elaionf102").style.display = "flex"; 
   }else 
   document.getElementById("icono_elaion2").style.display = "flex"; 
 
  
  
-  if (inputBuscar3.value === "103899" || inputBuscar3.value ==="103896"|| inputBuscar3.value === "176395" || inputBuscar3.value === "176396") {
+  if (inputBuscar3.value === "103899" || inputBuscar3.value ==="103896") {
     document.getElementById("icono_elaionf303").style.display = "flex";    
   }
-  else if (inputBuscar3.value === "104099" || inputBuscar3.value ==="104096" || inputBuscar3.value === "193299" || inputBuscar3.value === "193296"|| inputBuscar3.value === "176095" || inputBuscar3.value === "176096"|| inputBuscar3.value === "176195" || inputBuscar3.value === "176196"){
+  else if (inputBuscar3.value === "176395" || inputBuscar3.value ==="176396"|| inputBuscar3.value === "174195" || inputBuscar3.value === "174196"|| inputBuscar3.value === "174495" || inputBuscar3.value === "174496" || inputBuscar3.value === "176095" || inputBuscar3.value === "176096"|| inputBuscar3.value === "176195" || inputBuscar3.value === "176196"){
+    document.getElementById("icono_elaionfs503").style.display = "flex"; 
+  }
+  else if (inputBuscar3.value === "104099" || inputBuscar3.value ==="104096" || inputBuscar3.value === "193299" || inputBuscar3.value === "193296"){
     document.getElementById("icono_elaionf503").style.display = "flex"; 
   }
-  else if (inputBuscar3.value === "103799" || inputBuscar3.value === "103796" || inputBuscar3.value === "108099" || inputBuscar3.value === "108096"|| inputBuscar3.value === "174195" || inputBuscar3.value === "174196"|| inputBuscar3.value === "174495" || inputBuscar3.value === "174496") {
+  else if (inputBuscar3.value === "103799" || inputBuscar3.value === "103796" || inputBuscar3.value === "108099" || inputBuscar3.value === "108096") {
     document.getElementById("icono_elaionf103").style.display = "flex"; 
   } 
     else if (inputBuscar3.value === "185496" || inputBuscar3.value === "184596" || inputBuscar3.value === "504896" || inputBuscar3.value === "114731"|| inputBuscar3.value === "186631" || inputBuscar3.value === "186696"|| inputBuscar3.value === "114796" || inputBuscar3.value === "185296") {
@@ -746,7 +758,7 @@ document.getElementById("autos").addEventListener('change', function() {
     
   }
   if (valor_select == "clio12") {
-    campo1.value ="104099";
+    campo1.value ="172995";
     campo5.value = "18577";
     campo6.value = "18416"; 
     campo7.value = "15141";
@@ -1047,16 +1059,16 @@ document.getElementById("autos").addEventListener('change', function() {
      
      } 
      if (valor_select == "berlingo19") {
-      campo1.value ="103899"; 
-      campo2.value ="103896";                            
+      campo1.value ="176395"; 
+      campo2.value ="176396";                            
       campo5.value ="4011558076658";
       campo6.value ="18084";
       campo7.value = "18533";     
      
      } 
      if (valor_select == "partner19") {
-      campo1.value ="103899"; 
-      campo2.value ="103896";                            
+      campo1.value ="176395"; 
+      campo2.value ="176396";                            
       campo5.value ="4011558076658";
       campo6.value ="18084";
       campo7.value = "18533";     
@@ -1180,17 +1192,17 @@ document.getElementById("autos").addEventListener('change', function() {
       
     } 
     if (valor_select == "astra20nafta") {
-      campo1.value ="104099";                            
-      campo2.value ="104096";
+      campo1.value ="176195";                            
+      campo2.value ="176196";
       campo5.value ="4011558744502";
       campo6.value ="15529"; 
       campo7.value ="18712"; 
       
     } 
     if (valor_select == "astra20diesel") {
-      campo1.value ="104099";
-      campo2.value ="104096"; 
-      campo3.value ="104096";               
+      campo1.value ="176195";
+      campo2.value ="176196"; 
+      campo3.value ="176196";               
       campo5.value ="18486";
       campo6.value ="15529"; 
       campo7.value ="4011558055783"; 
@@ -1212,8 +1224,8 @@ document.getElementById("autos").addEventListener('change', function() {
       
     } 
     if (valor_select == "merivad") {
-      campo1.value ="104099"; 
-      campo2.value ="104096";           
+      campo1.value ="176195"; 
+      campo2.value ="176196";           
       campo5.value ="15124";
       campo6.value ="4011558075606"; 
       campo7.value ="4011558055783"; 
@@ -1229,23 +1241,23 @@ document.getElementById("autos").addEventListener('change', function() {
       
     } 
     if (valor_select == "palio18") {
-      campo1.value ="104099";     
+      campo1.value ="176195";     
       campo5.value ="4011558744502";
       campo6.value ="18226"; 
       campo7.value ="18711"; 
       
     } 
     if (valor_select == "paliodiesel") {
-      campo1.value ="103899";   
-      campo2.value ="103896";
+      campo1.value ="176395";   
+      campo2.value ="176396";
       campo5.value ="18602";
       campo6.value ="18226"; 
       campo7.value ="18812"; 
       
     } 
     if (valor_select == "s10mwm") {
-      campo1.value ="104099";   
-      campo2.value ="104099";
+      campo1.value ="176195";   
+      campo2.value ="176195";
       campo5.value ="18570";
       campo6.value ="18040"; 
       campo7.value ="15142"; 
@@ -1260,14 +1272,14 @@ document.getElementById("autos").addEventListener('change', function() {
       
     } 
     if (valor_select == "polo16") {
-      campo1.value ="103899";   
+      campo1.value ="176395";   
       campo5.value ="18622";
       campo6.value ="18288"; 
       campo7.value ="18712"; 
       
     } 
     if (valor_select == "polo19") {
-      campo1.value ="103899";   
+      campo1.value ="176395";   
       campo5.value ="18683";
       campo6.value ="18289"; 
       campo7.value ="18821"; 
@@ -1304,8 +1316,8 @@ document.getElementById("autos").addEventListener('change', function() {
       
     }
     if (valor_select == "kangoo19") {
-      campo1.value ="103899";
-      campo2.value = "103896";
+      campo1.value ="176395";
+      campo2.value = "176396";
       campo5.value = "18624";
       campo6.value = "15650";
       campo7.value = "15163";
@@ -1351,8 +1363,8 @@ document.getElementById("autos").addEventListener('change', function() {
       
      }
      if (valor_select == "20719d") {
-      campo1.value ="103899";
-      campo2.value ="103896";
+      campo1.value ="176395";
+      campo2.value ="176396";
       campo5.value = "4011558076658";
       campo6.value = "15139";
       campo7.value = "18533";
@@ -1373,7 +1385,7 @@ document.getElementById("autos").addEventListener('change', function() {
       
      }
      if (valor_select == "gol19") {
-      campo1.value ="103899";
+      campo1.value ="176395";
       campo5.value = "18683";
       campo6.value = "18311";
       campo7.value = "18819";
@@ -1433,8 +1445,8 @@ document.getElementById("autos").addEventListener('change', function() {
       campo7.value = "18775";
      }
      if (valor_select == "escortendura") {
-      campo1.value ="103899";
-      campo2.value ="103896";
+      campo1.value ="176395";
+      campo2.value ="176396";
       campo5.value = "18604";
       campo6.value = "18234";
       campo7.value = "18527";
