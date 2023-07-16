@@ -47,18 +47,7 @@
 .whatsapp_logo {
  height: 25px;
 }        
-.texto_completo {
 
- font-size: 15px;
- text-align: center;
- 
-}
-.texto_premium {
-
- font-size: 15px;
- text-align: center;
- 
-}
 .precio_completo {
 
   font-size: 15px;
@@ -212,6 +201,20 @@
   padding-bottom: 1rem;
 }
 */
+.texto_completo {
+
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  
+ }
+ .texto_premium {
+
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  
+ }
 
 
 @media print {
@@ -236,6 +239,7 @@
           z-index: -1;
         }
       }
+
       
       
 body {

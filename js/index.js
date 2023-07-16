@@ -38,6 +38,8 @@ verProductosapi();
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
 const PREMIUM = 2500
 
+
+
 //////////////////////ESTA FUNCION REFRESCA LA PAGINA////////////////////////////////////////////////////
 
 function refrescarPagina() {
@@ -359,8 +361,13 @@ mostrarToast3()
 
 ////////////ESTAS FUNCIONES SUMAN TODOS LOS CODIGOS INGRESADOS LUEGO DE CLICKEAR EL BOTON TOTAL///////////////
 
+
+
+
+
+
 function sumarPrecios1() {
- const precios = [
+  const precios = [
     parseFloat(document.getElementById('precio').innerHTML) || 0,
     parseFloat(document.getElementById('precio1').innerHTML) || 0,
     parseFloat(document.getElementById('precio2').innerHTML) || 0,
@@ -373,10 +380,43 @@ function sumarPrecios1() {
   for (let i = 0; i < precios.length; i++) {
     precioTotal2 += precios[i];
   }
-  document.getElementById('sumaCompleto').innerHTML = '$' + precioTotal2;
+  //document.getElementById('sumaCompleto').innerHTML = '$' + precioTotal2.toFixed(0) + '<br>' + ' <small>3 cuotas sin interés de  $' + (precioTotal2/3).toFixed(0) + '</small>';
+  document.getElementById('sumaCompleto').innerHTML = '$' + precioTotal2.toFixed(0) + '<br>' + ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de</span> $' + (precioTotal2/3).toFixed(0) + '</small>';
+
+
+  //document.getElementById('sumaCompleto').innerHTML = '$' + precioTotal2 + '<br>' + ' $' + (precioTotal2/3).toFixed(0)
+
+
  ocultarBotones()
  ocultarInputs()
 }
+
+/*function sumarPrecios1() {
+  const precios = [
+    parseFloat(document.getElementById('precio').innerHTML) || 0,
+    parseFloat(document.getElementById('precio1').innerHTML) || 0,
+    parseFloat(document.getElementById('precio2').innerHTML) || 0,
+    parseFloat(document.getElementById('precio3').innerHTML) || 0,
+    parseFloat(document.getElementById('precio4').innerHTML) || 0,
+    parseFloat(document.getElementById('precio5').innerHTML) || 0,
+    parseFloat(document.getElementById('precio6').innerHTML) || 0
+  ];
+  let precioTotal2 = 0;
+  for (let i = 0; i < precios.length; i++) {
+    precioTotal2 += precios[i];
+  }
+  
+  const precioTotalCuotas = precioTotal2 / 3;
+  
+  document.getElementById('sumaCompleto').innerHTML = '$' + precioTotal2;
+  document.getElementById('completoCuotas').innerHTML = '<small>3 cuotas sin interés de $' + precioTotalCuotas.toFixed(2) + '</small>';
+
+  ocultarBotones();
+ ocultarInputs();
+}
+*/
+
+
 function sumarPrecios2() {
   const precios = [
     parseFloat(document.getElementById('precio').innerHTML) || 0,
@@ -392,11 +432,23 @@ function sumarPrecios2() {
     precioTotal += precios[i];
   }
   precioTotal += PREMIUM;
-  document.getElementById('sumaPremium').innerHTML = '$' + precioTotal;
+
+  document.getElementById('sumaPremium').innerHTML = '$' + precioTotal.toFixed(0) + '<br>' + ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de</span> $' + (precioTotal/3).toFixed(0) + '</small>';
+
+
+ // document.getElementById('sumaPremium').innerHTML = '$' + precioTotal;
   mostrarToasttotal()
-  ocultarBotones();
-  ocultarInputs();
+ ocultarBotones();
+ ocultarInputs();
 }
+
+/*function agregaCuotas() {
+  const cuotas = 3;
+  const precioTotal2 = parseFloat(document.getElementById('sumaCompleto').innerHTML.replace('$', ''));
+  const precioCuotas = precioTotal2 / cuotas;
+  return document.getElementById('completoCuotas').innerHTML = '$' + precioCuotas;
+*/
+
 
 function sumatodo() {
   agregarFechayhora()
@@ -408,7 +460,10 @@ function sumatodo() {
  document.getElementById("boton5").click();
  document.getElementById("boton6").click();
  sumarPrecios1();
+ //agregaCuotas()
  sumarPrecios2();
+
+  
  bloquearSelect()
  setTimeout (() => {
   imprimirPagina()
@@ -416,7 +471,19 @@ function sumatodo() {
   
 }
 
-     
+
+
+
+
+ function clickearAgregar() {
+  document.getElementById("boton0").click();
+  document.getElementById("boton1").click();
+  document.getElementById("boton2").click();
+  document.getElementById("boton3").click();
+  document.getElementById("boton4").click();
+  document.getElementById("boton5").click();
+  document.getElementById("boton6").click();
+ }    
 ///////ESTA FUNCION BUSCA UNA CADENA EN DESCRIPCION DEL ARRAY Y DEVUELVE LAS COINCIDENCIAS EN UNA LI MOSTRANDO CODIGO-DESCRIPCION//////
 
 function buscarDescripcion() {
@@ -590,6 +657,15 @@ let campo8 = document.getElementById("inputBuscar7");
 
 document.getElementById("autos").addEventListener('change', function() {
   let valor_select = this.value;
+  const campos = [campo1,campo2,campo3,campo4, campo5, campo6, campo7];
+  
+  for (let campo of campos) {
+    if (campo.value) {
+      campo.value = "";
+    }
+  }
+
+  
   if (valor_select == "goltrend") {
     campo1.value ="172795";
     campo5.value = "18595";
@@ -1456,7 +1532,16 @@ document.getElementById("autos").addEventListener('change', function() {
       campo5.value = "15609";
       campo6.value = "15496";
      }
-  })
+     if (valor_select == "focus2diesel") {
+      campo1.value ="171895";
+      campo2.value ="171896";
+      campo3.value ="171896";
+      campo5.value = "15076";
+      campo6.value = "4011558801830";
+     }
+
+ 
+  } )
 
 
 
