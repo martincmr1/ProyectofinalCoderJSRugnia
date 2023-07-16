@@ -50,14 +50,14 @@
 
 .precio_completo {
 
-  font-size: 15px;
+  font-size: 16px;
  text-align: right;
  
  
  
 }   
 .precio_premium {
- font-size: 15px;
+ font-size: 16px;
  text-align: right;
 }           
 .parrafo_revision {
@@ -204,20 +204,22 @@
 */
 .texto_completo {
 
-  font-size: 16px;
+  font-size: 21px;
   text-align: center;
   overflow: hidden;
   
  }
  .texto_premium {
 
-  font-size: 16px;
+  font-size: 21px;
   text-align: center;
   overflow: hidden;
   
  }
 
-
+.table {
+  margin-bottom: 0px;
+}
 @media print {
         body {
           width: 21cm;
