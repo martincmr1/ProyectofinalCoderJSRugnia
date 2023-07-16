@@ -1539,6 +1539,12 @@ document.getElementById("autos").addEventListener('change', function() {
       campo5.value = "15076";
       campo6.value = "4011558801830";
      }
+     if (valor_select == "qubo") {
+      campo1.value ="172995";
+      campo5.value = "15067";
+      campo6.value = "15412";
+     }
+
 
  
   } )
