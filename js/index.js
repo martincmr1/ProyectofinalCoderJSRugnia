@@ -20,6 +20,13 @@ let productosServer = [];
 
 verProductosapi();
 */
+//const XLSX = require("xlsx");
+
+
+
+
+
+
 
 
 
@@ -30,13 +37,17 @@ function verProductosapi() {
  productosServer = jsonResponse;
  productos = productosServer;   
 })
+
 }
 let productos = [];
 let productosServer = [];
+
 verProductosapi();
 
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
 const PREMIUM = 2500
+
+
 
 
 
@@ -226,6 +237,7 @@ function buscarCoincidencia(){
 function buscarCoincidencia1(){
  const codigo = document.getElementById("inputBuscar1").value
  const producto = productos.find(p => p.codigo === codigo);
+
   if (!producto) {
     Swal.fire('código no encontrado')
   }
@@ -234,7 +246,34 @@ function buscarCoincidencia1(){
     document.getElementById("fila2").style.display = "none";
    }else   
    document.getElementById ('precio1').innerHTML=producto.precio
+  
 }
+//document.getElementById("inputBuscar1").addEventListener("input", buscarCoincidencia1);
+//buscarCoincidencia1()
+/*
+function buscarCoincidencia1() {
+  const codigo = document.getElementById("inputBuscar1").value;
+  const producto = productos.find(p => p.codigo === codigo);
+  
+  if (!producto) {
+   // console.log(producto) Swal.fire('Código no encontrado');
+  } else {
+    document.getElementById('descripcion1').innerHTML = producto.descripcion;
+    
+    if (producto.precio === 0) {
+      document.getElementById("fila2").style.display = "none";
+    } else {
+      document.getElementById("fila2").style.display = "block";
+    }
+    
+    document.getElementById('precio1').innerHTML = producto.precio;
+  }
+}
+*/
+// Agregar un event listener al elemento de entrada (input)
+
+
+
 
 
 function buscarCoincidencia2(){
@@ -668,14 +707,14 @@ document.getElementById("autos").addEventListener('change', function() {
   
   if (valor_select == "goltrend") {
     campo1.value ="172795";
-    campo5.value = "18595";
+    campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "15424";
     
   }
   if (valor_select == "suran8v") {
     campo1.value ="172795";
-    campo5.value = "18595";
+    campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "18739";
     
