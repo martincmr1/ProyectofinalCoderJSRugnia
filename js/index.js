@@ -45,7 +45,11 @@ let productosServer = [];
 verProductosapi();
 
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
-const PREMIUM = 2500
+const PREMIUM = 3500
+
+
+
+
 
 
 
