@@ -36,7 +36,7 @@ function verProductosapi() {
  .then((jsonResponse) => {
  productosServer = jsonResponse;
  productos = productosServer;  
- console.log(productos) 
+
 })
 
 }
@@ -46,14 +46,9 @@ let productosServer = [];
 verProductosapi();
 
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
+
+
 const PREMIUM = 3500
-
-
-
-
-
-
-
 
 
 //////////////////////ESTA FUNCION REFRESCA LA PAGINA////////////////////////////////////////////////////
