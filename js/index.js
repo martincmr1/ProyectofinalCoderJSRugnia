@@ -35,7 +35,8 @@ function verProductosapi() {
  .then((response) => response.json())
  .then((jsonResponse) => {
  productosServer = jsonResponse;
- productos = productosServer;   
+ productos = productosServer;  
+ console.log(productos) 
 })
 
 }
@@ -224,166 +225,61 @@ mostrarToast4()
 });    */
 //////////////////////////AGREGAR PRODUCTOS A LA TABLA (busca el código y devuelve precio y descripcion del array productos)/////////
 
-function buscarCoincidencia(){
- const codigo = document.getElementById("inputBuscar").value
- const producto = productos.find(p => p.codigo === codigo);
-  if (!producto) {
-    Swal.fire('código no encontrado')
-    }
-    document.getElementById('descripcion').innerHTML=producto.descripcion
-    if (producto.precio==0){
-      document.getElementById("fila1").style.display = "none";
-     }else
-    document.getElementById ('precio').innerHTML=producto.precio
-}
 
-
-function buscarCoincidencia1(){
- const codigo = document.getElementById("inputBuscar1").value
- const producto = productos.find(p => p.codigo === codigo);
-
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-   document.getElementById('descripcion1').innerHTML=producto.descripcion
-   if (producto.precio==0){
-    document.getElementById("fila2").style.display = "none";
-   }else   
-   document.getElementById ('precio1').innerHTML=producto.precio
-  
-}
-//document.getElementById("inputBuscar1").addEventListener("input", buscarCoincidencia1);
-//buscarCoincidencia1()
-/*
-function buscarCoincidencia1() {
-  const codigo = document.getElementById("inputBuscar1").value;
+function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch){
+  const codigo = document.getElementById(inputSearch).value
   const producto = productos.find(p => p.codigo === codigo);
-  
-  if (!producto) {
-   // console.log(producto) Swal.fire('Código no encontrado');
-  } else {
-    document.getElementById('descripcion1').innerHTML = producto.descripcion;
-    
-    if (producto.precio === 0) {
-      document.getElementById("fila2").style.display = "none";
-    } else {
-      document.getElementById("fila2").style.display = "block";
-    }
-    
-    document.getElementById('precio1').innerHTML = producto.precio;
-  }
-}
-*/
-// Agregar un event listener al elemento de entrada (input)
+   if (!producto) {
+     Swal.fire('código no encontrado')
+     }
+     document.getElementById(descripcionSearch).innerHTML=producto.descripcion
+     if (producto.precio==0){
+       document.getElementById(filaSearch).style.display = "none";
+      }else
+     document.getElementById (priceSearch).innerHTML=producto.precio
+ }
 
 
 
 
 
-function buscarCoincidencia2(){
- const codigo = document.getElementById("inputBuscar2").value
- const producto = productos.find(p => p.codigo === codigo);
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-  document.getElementById('descripcion2').innerHTML=producto.descripcion
-  if (producto.precio==0){
-    document.getElementById("fila3").style.display = "none";
-   }else 
-  document.getElementById ('precio2').innerHTML=producto.precio
-}
 
-
-function buscarCoincidencia3(){
- const codigo = document.getElementById("inputBuscar3").value
- const producto = productos.find(p => p.codigo === codigo);
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-   document.getElementById('descripcion3').innerHTML=producto.descripcion
-   if (producto.precio==0){
-    document.getElementById("fila4").style.display = "none";
-   }else
-   document.getElementById ('precio3').innerHTML=producto.precio
-}
-
-
-function buscarCoincidencia4(){
- const codigo = document.getElementById("inputBuscar4").value
- const producto = productos.find(p => p.codigo === codigo);  
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-   document.getElementById('descripcion4').innerHTML=producto.descripcion
-   if (producto.precio==0){
-    document.getElementById("fila5").style.display = "none";
-   }else  
-   document.getElementById ('precio4').innerHTML=producto.precio
-}
-
-
-function buscarCoincidencia5(){
- const codigo = document.getElementById("inputBuscar5").value
- const producto = productos.find(p => p.codigo === codigo);
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-   document.getElementById('descripcion5').innerHTML=producto.descripcion
-   if (producto.precio==0){
-    document.getElementById("fila6").style.display = "none";
-   }else  
-   document.getElementById ('precio5').innerHTML=producto.precio
-}
-
-
-function buscarCoincidencia6(){
- const codigo = document.getElementById("inputBuscar6").value
- const producto = productos.find(p => p.codigo === codigo);
-  if (!producto) {
-    Swal.fire('código no encontrado')
-  }
-   document.getElementById('descripcion6').innerHTML=producto.descripcion
-   if (producto.precio==0){
-    document.getElementById("fila7").style.display = "none";
-   }else
-   document.getElementById ('precio6').innerHTML=producto.precio
-}
 
 /// AL CLICKEAR LOS BOTONES "AGREGAR" MUESTRA EL VALOR DE DESCRIPCION Y PRECIO DEL ARRAY PRODUCTOS VINCULADOS AL CODIGO SELECCIONADO///
 
 let boton0 = document.getElementById("boton0")
 boton0.addEventListener("click", () => {
-buscarCoincidencia()
+buscarCoincidencia("inputBuscar",'descripcion',"fila1",'precio')
 mostrarToast()
 })
 let boton1 = document.getElementById("boton1")
 boton1.addEventListener("click", () => {
-buscarCoincidencia1()
+buscarCoincidencia("inputBuscar1",'descripcion1',"fila2",'precio1')
 mostrarToast()
 })
 let boton2 = document.getElementById("boton2")
 boton2.addEventListener("click", () => {
-buscarCoincidencia2()
+buscarCoincidencia("inputBuscar2",'descripcion2',"fila3",'precio2')
 mostrarToast()
 })  
 let boton3 = document.getElementById("boton3")
 boton3.addEventListener("click", () => {
-buscarCoincidencia3()
+buscarCoincidencia("inputBuscar3",'descripcion3',"fila4",'precio3')
 mostrarToast()
 })
 let boton4 = document.getElementById("boton4")
 boton4.addEventListener("click", () => {
-buscarCoincidencia4()
+buscarCoincidencia("inputBuscar4",'descripcion4',"fila5",'precio4')
 mostrarToast()
 })
 let boton5 = document.getElementById("boton5")
 boton5.addEventListener("click", () => {
-buscarCoincidencia5()
+buscarCoincidencia("inputBuscar5",'descripcion5',"fila6",'precio5')
 mostrarToast()
 })
 let boton6 = document.getElementById("boton6")
 boton6.addEventListener("click", () => {
-buscarCoincidencia6()
+buscarCoincidencia("inputBuscar6",'descripcion6',"fila7",'precio6')
 mostrarToast()
 })
 let boton7 = document.getElementById("boton7")
@@ -688,6 +584,16 @@ let campo7 = document.getElementById("inputBuscar6");
 let campo8 = document.getElementById("inputBuscar7");
 
 
+
+
+
+
+
+
+
+
+
+
 ////////////////ESTA FUNCION RECARGA LA PAGINA AL USAR EL SELECT PARA GENERAR UN NUEVO PRESUPUESTO
 
 /*function recargarPagina() {
@@ -714,6 +620,8 @@ document.getElementById("autos").addEventListener('change', function() {
     campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "15424";
+
+    
     
   }
   if (valor_select == "suran8v") {
@@ -1588,7 +1496,23 @@ document.getElementById("autos").addEventListener('change', function() {
       campo6.value = "15412";
      }
 
+function actualizarDescripcion(campo,descripcionid,precioid) {
+  const codigo = campo.value;
+  const producto = productos.find((p) => p.codigo === codigo);
+  const price = productos.find((p) => p.codigo === codigo);
+ 
+    document.getElementById(descripcionid).innerHTML = producto.descripcion;
+    document.getElementById(precioid).innerHTML = price.precio;
 
+}
+
+     actualizarDescripcion(campo1,'descripcion','precio')
+     actualizarDescripcion(campo2,'descripcion1','precio1')
+     actualizarDescripcion(campo3,'descripcion2','precio2')
+     actualizarDescripcion(campo4,'descripcion3','precio3')
+     actualizarDescripcion(campo5,'descripcion4','precio4')
+     actualizarDescripcion(campo6,'descripcion5','precio5')
+     actualizarDescripcion(campo7,'descripcion6','precio6')
  
   } )
 
