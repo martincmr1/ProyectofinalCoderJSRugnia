@@ -224,6 +224,23 @@ agregarStorage()
 mostrarToast4()
 });    */
 //////////////////////////AGREGAR PRODUCTOS A LA TABLA (busca el código y devuelve precio y descripcion del array productos)/////////
+/*
+
+function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch){
+  const codigo = document.getElementById(inputSearch).value
+  const producto = productos.find(p => p.codigo === codigo);
+   if (!producto) {
+     Swal.fire('código no encontrado')
+     }
+     document.getElementById(descripcionSearch).innerHTML=producto.descripcion
+    if (producto.precio==0){
+       document.getElementById(filaSearch).style.display = "none";
+      }else
+     document.getElementById (priceSearch).innerHTML=producto.precio
+ }
+
+*/
+ 
 
 
 function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch){
@@ -233,13 +250,8 @@ function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch
      Swal.fire('código no encontrado')
      }
      document.getElementById(descripcionSearch).innerHTML=producto.descripcion
-     if (producto.precio==0){
-       document.getElementById(filaSearch).style.display = "none";
-      }else
      document.getElementById (priceSearch).innerHTML=producto.precio
  }
-
-
 
 
 
@@ -439,15 +451,40 @@ function sumarPrecios2() {
 */
 
 
+function checkInput(inputId,filaId) {
+  if (document.getElementById(inputId).value === '') {
+    document.getElementById(filaId).style.display = "none";
+  }
+}
+
+
+
+
+
 function sumatodo() {
   agregarFechayhora()
-  document.getElementById("boton0").click();
- document.getElementById("boton1").click();
- document.getElementById("boton2").click();
- document.getElementById("boton3").click();
- document.getElementById("boton4").click();
- document.getElementById("boton5").click();
- document.getElementById("boton6").click();
+ 
+
+checkInput('inputBuscar','fila1')
+checkInput('inputBuscar1','fila2')
+checkInput('inputBuscar2','fila3')
+checkInput('inputBuscar3','fila4')
+checkInput('inputBuscar4','fila5')
+checkInput('inputBuscar5','fila6')
+checkInput('inputBuscar6','fila7')
+
+ 
+
+document.getElementById("boton0").click();
+document.getElementById("boton1").click();
+document.getElementById("boton2").click();
+document.getElementById("boton3").click();
+document.getElementById("boton4").click();
+document.getElementById("boton5").click();
+document.getElementById("boton6").click();
+
+
+
  sumarPrecios1();
  //agregaCuotas()
  sumarPrecios2();
