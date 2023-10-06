@@ -247,6 +247,56 @@ function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch
 
 /// AL CLICKEAR LOS BOTONES "AGREGAR" MUESTRA EL VALOR DE DESCRIPCION Y PRECIO DEL ARRAY PRODUCTOS VINCULADOS AL CODIGO SELECCIONADO///
 
+
+
+
+
+
+
+
+let input0=document.getElementById("inputBuscar")
+input0.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar",'descripcion',"fila1",'precio')
+})
+
+let input1=document.getElementById("inputBuscar1")
+input1.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar1",'descripcion1',"fila2",'precio1')
+})
+
+let input2=document.getElementById("inputBuscar2")
+input2.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar2",'descripcion2',"fila3",'precio2')
+})
+
+
+let input3=document.getElementById("inputBuscar3")
+input3.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar3",'descripcion3',"fila4",'precio3')
+})
+
+
+let input4=document.getElementById("inputBuscar4")
+input4.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar4",'descripcion4',"fila5",'precio4')
+})
+
+
+let input5=document.getElementById("inputBuscar5")
+input5.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar5",'descripcion5',"fila6",'precio5')
+})
+
+
+let input6=document.getElementById("inputBuscar6")
+input6.addEventListener("change",()=> {
+  buscarCoincidencia("inputBuscar6",'descripcion6',"fila7",'precio6')
+})
+
+
+
+
+
 let boton0 = document.getElementById("boton0")
 boton0.addEventListener("click", () => {
 buscarCoincidencia("inputBuscar",'descripcion',"fila1",'precio')
@@ -1526,61 +1576,6 @@ function actualizarDescripcion(campo,descripcionid,precioid) {
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
