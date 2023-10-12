@@ -1,257 +1,313 @@
 *{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-
-
-#floatingInputGrid {
- width: 250px;
- height: 15px;
- display: inline;               
-}
-.icono_elaion {
- display: none;
- height: 30px;
- align-content: start;
- margin-left: 4rem;
-}
-.icono_aceite {
- display: none;
- height: 30px;
- align-content: start;
- margin-left: 4rem;
-}
-.icono_combustible {
- display: none;
- height: 25px;
- align-content: start;
- margin-left: 4rem;
-}
-.icono_aire {
- display: none;
- height: 30px;
- align-content: start;
- margin-left: 4rem; 
-}  
-.appypf_logo {
- height: 25px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
  
-}          
-.logo_boxes {
- height: 30px; 
- padding-left: 2rem;
-}               
-.imagen_ubicacion {
- height: 25px;
- padding-left: 1rem;
-}      
-.whatsapp_logo {
- height: 25px;
-}        
-
-.precio_completo {
-
+ 
+ 
+ #floatingInputGrid {
+  width: 250px;
+  height: 15px;
+  display: inline;               
+ }
+ .icono_elaion {
+  display: none;
+  height: 30px;
+  align-content: start;
+  margin-left: 4rem;
+ }
+ .icono_aceite {
+  display: none;
+  height: 30px;
+  align-content: start;
+  margin-left: 4rem;
+ }
+ .icono_combustible {
+  display: none;
+  height: 25px;
+  align-content: start;
+  margin-left: 4rem;
+ }
+ .icono_aire {
+  display: none;
+  height: 30px;
+  align-content: start;
+  margin-left: 4rem; 
+ }  
+ .appypf_logo {
+  height: 25px;
+  
+ }          
+ .logo_boxes {
+  height: 30px; 
+  padding-left: 2rem;
+ }               
+ .imagen_ubicacion {
+  height: 25px;
+  padding-left: 1rem;
+ }      
+ .whatsapp_logo {
+  height: 25px;
+ }        
+ 
+ .precio_completo {
+ 
+   font-size: 16px;
+  text-align: right;
+  
+  
+  
+ }   
+ .precio_premium {
   font-size: 16px;
- text-align: right;
+  text-align: right;
+ }           
+ .parrafo_revision {
+  padding-top: 0.3rem;
+  font-size: 14px;
+  font-style: oblique;
+  padding-left: 5rem;
+ }
+ .datos_contacto {
+  text-align: start;
+  font-size: 13px;
  
+ }
+ .descaner { 
+  background-color: rgb(97, 153, 199);           
+  color: white;
+  padding: 0.3rem;
+  font-weight: bold;
+  font-size: 14px;
+ }
+ .completo_titulo1 {
+  background-color: rgb(81, 81, 203);
+  padding: 0.57rem;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+ }
+ .completo_titulo2 {
+  background-color:green ;
+  padding: 0.7rem;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+ }
+ .completo_titulo3 {
+  background-color: crimson;
+  padding: 0.7rem;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;                
+ }
+ .completo_titulo4 {
+  background-color: gold;
+  padding: 0.4rem;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+ }
+ .nazul {
+  border-radius: 55%; 
+  background-color:rgb(81, 81, 203);
+  color: white;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center; 
+  line-height: 20px;  
+ }
+ .nverde { 
+  border-radius: 55%; 
+  background-color:green;
+  color: white;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center; 
+  line-height: 20px;
+ }
+ .nrojo { 
+  border-radius: 55%; 
+  background-color:red;
+  color: white;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center; 
+  line-height: 20px;
+ }
+ .namarillo { 
+  border-radius: 55%; 
+  background-color:gold;
+  color: white;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center; 
+  line-height: 20px;
+ }
+ .table {
+  font-size: 12px;
+  
+ }          
+ .texto_escaner {
+  font-size: 13px;
+  line-height: 12px;            
+ }
+ .certificado {
+   padding: 0%;
+  font-size: 11px;
+  margin-left: 1rem;
+  text-align: justify;
+  margin-right: 1rem;
+ }
+ .logo_aca {
+  height: 45px;
+  margin-left: 2rem;
+  width: 65px;
  
+ }
+ .logo_escalonado {
+  height: 45px;
+  margin-left: 2rem;
+  width: 65px;
  
-}   
-.precio_premium {
- font-size: 16px;
- text-align: right;
-}           
-.parrafo_revision {
- padding-top: 0.3rem;
- font-size: 14px;
- font-style: oblique;
- padding-left: 5rem;
-}
-.datos_contacto {
- text-align: start;
- font-size: 13px;
+ }
+ .logo_cosmetica {
+  height: 45px;
+  width: 80px;
+ }      
+ .logo_credito {
+  height: 45px;
+  width: 80px;
+ } 
+ .diagnosticos_contenedor {
+  font-size: 12px;
+  line-height: 10px;
+ }
+ .fecha {
+         font-size: 12px;
+ }
 
-}
-.descaner { 
- background-color: rgb(97, 153, 199);           
- color: white;
- padding: 0.3rem;
- font-weight: bold;
- font-size: 14px;
-}
-.completo_titulo1 {
- background-color: rgb(81, 81, 203);
- padding: 0.57rem;
- color: white;
- font-weight: bold;
- font-size: 12px;
-}
-.completo_titulo2 {
- background-color:green ;
- padding: 0.7rem;
- color: white;
- font-weight: bold;
- font-size: 12px;
-}
-.completo_titulo3 {
- background-color: crimson;
- padding: 0.7rem;
- color: white;
- font-weight: bold;
- font-size: 12px;                
-}
-.completo_titulo4 {
- background-color: gold;
- padding: 0.4rem;
- color: white;
- font-weight: bold;
- font-size: 12px;
-}
-.nazul {
- border-radius: 55%; 
- background-color:rgb(81, 81, 203);
- color: white;
- display: inline-block;
- width: 20px;
- height: 20px;
- color: white;
- text-align: center; 
- line-height: 20px;  
-}
-.nverde { 
- border-radius: 55%; 
- background-color:green;
- color: white;
- display: inline-block;
- width: 20px;
- height: 20px;
- color: white;
- text-align: center; 
- line-height: 20px;
-}
-.nrojo { 
- border-radius: 55%; 
- background-color:red;
- color: white;
- display: inline-block;
- width: 20px;
- height: 20px;
- color: white;
- text-align: center; 
- line-height: 20px;
-}
-.namarillo { 
- border-radius: 55%; 
- background-color:gold;
- color: white;
- display: inline-block;
- width: 20px;
- height: 20px;
- color: white;
- text-align: center; 
- line-height: 20px;
-}
-.table {
- font-size: 13px;
- max-height: 50px;
-}          
-.texto_escaner {
- font-size: 13px;
- line-height: 12px;            
-}
-.certificado {
-  padding: 0%;
- font-size: 11px;
- margin-left: 1rem;
- text-align: justify;
- margin-right: 1rem;
-}
-.logo_aca {
- height: 45px;
- margin-left: 2rem;
- width: 65px;
+ td#descripcion{
+  width: 300px;
+ }
 
+#inputBuscar{
+  width: 110px;
 }
-.logo_escalonado {
- height: 45px;
- margin-left: 2rem;
- width: 65px;
 
+#inputBuscar1{
+  width: 110px;
 }
-.logo_cosmetica {
- height: 45px;
- width: 80px;
-}      
-.logo_credito {
- height: 45px;
- width: 80px;
-} 
-.diagnosticos_contenedor {
- font-size: 12px;
- line-height: 10px;
+
+#inputBuscar2{
+  width: 110px;
 }
-.fecha {
-        font-size: 12px;
+#inputBuscar3{
+  width: 110px;
 }
-.anchoColumna {
- width: 160px;               
+#inputBuscar4{
+  width: 110px;
 }
-.precio {
- text-align: right;       
+#inputBuscar5{
+  width: 110px;
 }
-/*.contenedorCambio {
-  padding-bottom: 1rem;
+#inputBuscar6{
+  width: 110px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+ .anchoColumna {
+  width: 160px;               
+ }
 */
-.texto_completo {
 
-  font-size: 21px;
-  text-align: center;
-  overflow: hidden;
-  
+ .precio {
+  text-align: right;       
  }
- .texto_premium {
-
-  font-size: 21px;
-  text-align: center;
-  overflow: hidden;
-  
+ /*.contenedorCambio {
+   padding-bottom: 1rem;
  }
+ */
+ .texto_completo {
+ 
+   font-size: 21px;
+   text-align: center;
+   overflow: hidden;
+   
+  }
+  .texto_premium {
+ 
+   font-size: 21px;
+   text-align: center;
+   overflow: hidden;
+   
+  }
 
-.table {
-  margin-bottom: 0px;
-}
-@media print {
-        body {
-          width: 21cm;
-          height: 29cm;
+  .columnPadding{
+    width: 130px;
+  }
+
+  .coches {
+    padding-left: 20px;
+  }
+ 
+ 
+ @media print {
+         body {
+           width: 21cm;
+           height: 29cm;
+           margin: 0;
+           padding: 0;
+         }
+         
+         /* Opcional: agregar un borde alrededor de la página impresa */
+         body::after {
+           content: "";
+           display: block;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           /*border: 1px solid black;*/
+           box-sizing: border-box;
+           z-index: -1;
+         }
+         @page {
+          size: A4;
           margin: 0;
-          padding: 0;
         }
-        
-        /* Opcional: agregar un borde alrededor de la página impresa */
-        body::after {
-          content: "";
-          display: block;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          /*border: 1px solid black;*/
-          box-sizing: border-box;
-          z-index: -1;
-        }
-      }
-
-      
-      
-body {
- width: 21cm;
- height: 29cm;
-}
-
-
-
+       }
+ 
+       
+       
+ body {
+  width: 21cm;
+  height: 29cm;
+ }

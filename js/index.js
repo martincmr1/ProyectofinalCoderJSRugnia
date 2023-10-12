@@ -105,11 +105,66 @@ botonCambiarTelefono.addEventListener('click', () => {
 });
 
 ////////////BLOQUEAR SELECT///////////////////////////////////////////////////////
-function bloquearSelect() {
-  var selectElement = document.getElementById('autos');
+
+function bloquearSelect(idSelect) {
+  var selectElement = document.getElementById(idSelect);
+  selectElement.disabled = true; // Deshabilita el select
+  selectElement.style.appearance = "none"; // Oculta la flecha
+  selectElement.style.background = "none"; // Elimina el fondo
+  selectElement.style.color = "#333"; // Cambia el color del texto a oscuro
+  selectElement.style.border = "none"; // Elimina el borde
+  selectElement.style.padding = "0"; // Ajusta el espaciado
+  selectElement.style.cursor = "not-allowed"; // Cambia el cursor a "no permitido"
+}
+
+
+
+
+
+
+function bloquearSelectCar(idSelect) {
+  var selectElement = document.getElementById(idSelect);
   selectElement.disabled = true;
   selectElement.style.backgroundColor = '#ffffff'; // Cambia el color de fondo a blanco
+  selectElement.disabled = true; // Deshabilita el select
+  selectElement.style.appearance = "none"; // Oculta la flecha
+  selectElement.style.background = "none"; // Elimina el fondo
+  selectElement.style.color = "#333"; // Cambia el color del texto a oscuro
+  selectElement.style.border = "none"; // Elimina el borde
+  selectElement.style.padding = "10"; // Ajusta el espaciado
+  selectElement.style.cursor = "not-allowed"; // Cambia el cursor a "no permitido"
+
+
+
 }
+
+
+function ocultarSelectYMostrarValorUn() {
+  // Obtén el elemento <select> con ID "cantidad1"
+  const selectCantidad1 = document.getElementById('cantidad1');
+
+  // Crea un nuevo elemento <span> para mostrar el valor
+  const spanValor = document.createElement('span');
+  spanValor.id = 'valorCantidad1';
+
+  // Agrega el nuevo elemento después del <select>
+  selectCantidad1.parentNode.insertBefore(spanValor, selectCantidad1.nextSibling);
+
+  // Escucha cambios en el <select>
+  selectCantidad1.addEventListener('change', function() {
+    // Oculta el <select>
+    selectCantidad1.style.display = 'none';
+
+    // Muestra el valor concatenado con "Un" en el <span>
+    spanValor.textContent = selectCantidad1.value + ' Un';
+  });
+}
+
+// Llama a la función para ocultar el select y mostrar su valor con "Un"
+
+
+
+
 
 
 
@@ -236,23 +291,136 @@ function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch
 
 */
  
-
-
-function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch){
-  const codigo = document.getElementById(inputSearch).value
+function buscarCoincidencia(inputSearch, descripcionSearch, priceSearch, quantity) {
+  const codigo = document.getElementById(inputSearch).value;
   const producto = productos.find(p => p.codigo === codigo);
-   if (!producto) {
-     Swal.fire('código no encontrado')
-     }
-     document.getElementById(descripcionSearch).innerHTML=producto.descripcion
-     document.getElementById (priceSearch).innerHTML=producto.precio
- }
+  
+  if (!producto) {
+    Swal.fire('Código no encontrado');
+  } else {
+    document.getElementById(descripcionSearch).innerHTML = producto.descripcion;
+    
+    // Convertimos producto.precio en un número entero antes de la multiplicación
+    const precio = parseInt(producto.precio, 10);
+
+    
+   
+      const precioFinal = precio * quantity;
+      document.getElementById(priceSearch).innerHTML = precioFinal;
+      console.log(precioFinal)
+    
+  }
+}
+
+
+const selectCantidad1 = document.getElementById('cantidad1');
+const input0 = document.getElementById("inputBuscar");
+
+let valorSeleccionado1 = selectCantidad1.value;
+
+selectCantidad1.addEventListener("change", () => {
+  valorSeleccionado1 = selectCantidad1.value;
+  buscarCoincidencia("inputBuscar", 'descripcion', 'precio', valorSeleccionado1);
+});
+
+input0.addEventListener("change", () => {
+  valorSeleccionado1 = selectCantidad1.value;
+  buscarCoincidencia('inputBuscar', 'descripcion', 'precio', valorSeleccionado1);
+
+});
+
+
+
+const selectCantidad2 = document.getElementById('cantidad2');
+const input1 = document.getElementById("inputBuscar1");
+
+let valorSeleccionado2 = selectCantidad2.value;
+
+selectCantidad2.addEventListener("change", () => {
+  valorSeleccionado2 = selectCantidad2.value;
+  buscarCoincidencia("inputBuscar1", 'descripcion1', 'precio1', valorSeleccionado2);
+});
+
+input1.addEventListener("change", () => {
+  valorSeleccionado2 = selectCantidad2.value;
+  buscarCoincidencia('inputBuscar1', 'descripcion1', 'precio1', valorSeleccionado2);
+ 
+});
+
+
+
+const selectCantidad3 = document.getElementById('cantidad3');
+const input2 = document.getElementById("inputBuscar3");
+
+let valorSeleccionado3 = selectCantidad3.value;
+
+selectCantidad3.addEventListener("change", () => {
+  valorSeleccionado3 = selectCantidad3.value;
+  buscarCoincidencia("inputBuscar3", 'descripcion3', 'precio3', valorSeleccionado3);
+});
+
+input2.addEventListener("change", () => {
+  valorSeleccionado3 = selectCantidad3.value;
+  buscarCoincidencia('inputBuscar3', 'descripcion3', 'precio3', valorSeleccionado3);
+ 
+});
+
+
+
+const selectCantidad4 = document.getElementById('cantidad4');
+const input3 = document.getElementById("inputBuscar4");
+
+let valorSeleccionado4 = selectCantidad4.value;
+
+selectCantidad4.addEventListener("change", () => {
+  valorSeleccionado4 = selectCantidad4.value;
+  buscarCoincidencia("inputBuscar4", 'descripcion4', 'precio4', valorSeleccionado4);
+});
+
+input3.addEventListener("change", () => {
+  valorSeleccionado4 = selectCantidad4.value;
+  buscarCoincidencia('inputBuscar4', 'descripcion4', 'precio4', valorSeleccionado4);
+  
+});
+
+
+const selectCantidad5 = document.getElementById('cantidad5');
+const input4= document.getElementById("inputBuscar5");
+
+let valorSeleccionado5 = selectCantidad5.value;
+
+selectCantidad5.addEventListener("change", () => {
+  valorSeleccionado5 = selectCantidad5.value;
+  buscarCoincidencia("inputBuscar5", 'descripcion5', 'precio5', valorSeleccionado5);
+});
+
+input4.addEventListener("change", () => {
+  valorSeleccionado5 = selectCantidad5.value;
+  buscarCoincidencia('inputBuscar5', 'descripcion5', 'precio5', valorSeleccionado5);
+  
+});
+
+
+const selectCantidad6 = document.getElementById('cantidad6');
+const input5 = document.getElementById("inputBuscar6");
+
+let valorSeleccionado6 = selectCantidad6.value;
+
+selectCantidad6.addEventListener("change", () => {
+  valorSeleccionado6 = selectCantidad6.value;
+  buscarCoincidencia("inputBuscar6", 'descripcion6', 'precio6', valorSeleccionado6);
+});
+
+input5.addEventListener("change", () => {
+  valorSeleccionado6 = selectCantidad6.value;
+  buscarCoincidencia('inputBuscar6', 'descripcion6', 'precio6', valorSeleccionado6);
+  
+});
 
 
 
 
 
-/// AL CLICKEAR LOS BOTONES "AGREGAR" MUESTRA EL VALOR DE DESCRIPCION Y PRECIO DEL ARRAY PRODUCTOS VINCULADOS AL CODIGO SELECCIONADO///
 
 
 
@@ -261,84 +429,16 @@ function buscarCoincidencia(inputSearch,descripcionSearch,filaSearch,priceSearch
 
 
 
-let input0=document.getElementById("inputBuscar")
-input0.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar",'descripcion',"fila1",'precio')
-})
-
-let input1=document.getElementById("inputBuscar1")
-input1.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar1",'descripcion1',"fila2",'precio1')
-})
-
-let input2=document.getElementById("inputBuscar2")
-input2.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar2",'descripcion2',"fila3",'precio2')
-})
-
-
-let input3=document.getElementById("inputBuscar3")
-input3.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar3",'descripcion3',"fila4",'precio3')
-})
-
-
-let input4=document.getElementById("inputBuscar4")
-input4.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar4",'descripcion4',"fila5",'precio4')
-})
-
-
-let input5=document.getElementById("inputBuscar5")
-input5.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar5",'descripcion5',"fila6",'precio5')
-})
-
-
-let input6=document.getElementById("inputBuscar6")
-input6.addEventListener("change",()=> {
-  buscarCoincidencia("inputBuscar6",'descripcion6',"fila7",'precio6')
-})
 
 
 
 
 
-let boton0 = document.getElementById("boton0")
-boton0.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar",'descripcion',"fila1",'precio')
-mostrarToast()
-})
-let boton1 = document.getElementById("boton1")
-boton1.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar1",'descripcion1',"fila2",'precio1')
-mostrarToast()
-})
-let boton2 = document.getElementById("boton2")
-boton2.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar2",'descripcion2',"fila3",'precio2')
-mostrarToast()
-})  
-let boton3 = document.getElementById("boton3")
-boton3.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar3",'descripcion3',"fila4",'precio3')
-mostrarToast()
-})
-let boton4 = document.getElementById("boton4")
-boton4.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar4",'descripcion4',"fila5",'precio4')
-mostrarToast()
-})
-let boton5 = document.getElementById("boton5")
-boton5.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar5",'descripcion5',"fila6",'precio5')
-mostrarToast()
-})
-let boton6 = document.getElementById("boton6")
-boton6.addEventListener("click", () => {
-buscarCoincidencia("inputBuscar6",'descripcion6',"fila7",'precio6')
-mostrarToast()
-})
+
+
+
+
+
 let boton7 = document.getElementById("boton7")
 boton7.addEventListener("click", () => {
 sumatodo()
@@ -366,7 +466,7 @@ function sumarPrecios1() {
   const precios = [
     parseFloat(document.getElementById('precio').innerHTML) || 0,
     parseFloat(document.getElementById('precio1').innerHTML) || 0,
-    parseFloat(document.getElementById('precio2').innerHTML) || 0,
+    
     parseFloat(document.getElementById('precio3').innerHTML) || 0,
     parseFloat(document.getElementById('precio4').innerHTML) || 0,
     parseFloat(document.getElementById('precio5').innerHTML) || 0,
@@ -417,7 +517,7 @@ function sumarPrecios2() {
   const precios = [
     parseFloat(document.getElementById('precio').innerHTML) || 0,
     parseFloat(document.getElementById('precio1').innerHTML) || 0,
-    parseFloat(document.getElementById('precio2').innerHTML) || 0,
+    
     parseFloat(document.getElementById('precio3').innerHTML) || 0,
     parseFloat(document.getElementById('precio4').innerHTML) || 0,
     parseFloat(document.getElementById('precio5').innerHTML) || 0,
@@ -462,7 +562,7 @@ function sumatodo() {
 
 checkInput('inputBuscar','fila1')
 checkInput('inputBuscar1','fila2')
-checkInput('inputBuscar2','fila3')
+
 checkInput('inputBuscar3','fila4')
 checkInput('inputBuscar4','fila5')
 checkInput('inputBuscar5','fila6')
@@ -472,7 +572,7 @@ checkInput('inputBuscar6','fila7')
 
 document.getElementById("boton0").click();
 document.getElementById("boton1").click();
-document.getElementById("boton2").click();
+
 document.getElementById("boton3").click();
 document.getElementById("boton4").click();
 document.getElementById("boton5").click();
@@ -485,7 +585,14 @@ document.getElementById("boton6").click();
  sumarPrecios2();
 
   
- bloquearSelect()
+ bloquearSelectCar('autos')
+ bloquearSelect('cantidad1')
+ bloquearSelect('cantidad2')
+ bloquearSelect('cantidad3')
+ bloquearSelect('cantidad4')
+ bloquearSelect('cantidad5')
+ bloquearSelect('cantidad6')
+ ocultarSelectYMostrarValorUn();
  setTimeout (() => {
   imprimirPagina()
 },1000)
@@ -499,7 +606,7 @@ document.getElementById("boton6").click();
  function clickearAgregar() {
   document.getElementById("boton0").click();
   document.getElementById("boton1").click();
-  document.getElementById("boton2").click();
+  
   document.getElementById("boton3").click();
   document.getElementById("boton4").click();
   document.getElementById("boton5").click();
@@ -534,7 +641,7 @@ resultados.push(`
 function ocultarBotones(){  
   document.getElementById("boton0").style.display = "none";
   document.getElementById("boton1").style.display = "none";
-  document.getElementById("boton2").style.display = "none";
+  
   document.getElementById("boton3").style.display = "none";
   document.getElementById("boton4").style.display = "none";
   document.getElementById("boton5").style.display = "none";
@@ -555,7 +662,7 @@ function ocultarInputs() {
   document.getElementById("resultados").style.display ="none";
   document.getElementById("inputBuscar").style.display = "none"; 
   document.getElementById("inputBuscar1").style.display = "none"; 
-  document.getElementById("inputBuscar2").style.display = "none";  
+  
   document.getElementById("inputBuscar3").style.display = "none"; 
   document.getElementById("inputBuscar4").style.display = "none"; 
   document.getElementById("inputBuscar5").style.display = "none"; 
@@ -602,19 +709,7 @@ function ocultarInputs() {
   document.getElementById("icono_elaion1").style.display = "flex"; 
 
 
-  if (inputBuscar2.value === "103899" || inputBuscar2.value ==="103896") {
-    document.getElementById("icono_elaionf302").style.display = "flex";    
-  }
-  else if (inputBuscar2.value === "176395" || inputBuscar2.value ==="176396"|| inputBuscar2.value === "174195" || inputBuscar2.value === "174196"|| inputBuscar2.value === "174495" || inputBuscar2.value === "174496"|| inputBuscar2.value === "176095" || inputBuscar2.value === "176096"|| inputBuscar2.value === "176195" || inputBuscar2.value === "176196" ){
-    document.getElementById("icono_elaionfs502").style.display = "flex"; 
-  }
-  else if (inputBuscar2.value === "104099" || inputBuscar2.value ==="104096" || inputBuscar2.value === "193299" || inputBuscar2.value === "193296"){
-    document.getElementById("icono_elaionf502").style.display = "flex"; 
-  }
-  else if (inputBuscar2.value === "103799" || inputBuscar2.value === "103796" || inputBuscar2.value === "108099" || inputBuscar2.value === "108096" ) {
-    document.getElementById("icono_elaionf102").style.display = "flex"; 
-  }else 
-  document.getElementById("icono_elaion2").style.display = "flex"; 
+
 
  
  
@@ -658,7 +753,7 @@ function ocultarInputs() {
 
 let campo1 = document.getElementById("inputBuscar");
 let campo2 = document.getElementById("inputBuscar1");
-let campo3 = document.getElementById("inputBuscar2");
+
 let campo4 = document.getElementById("inputBuscar3");
 let campo5 = document.getElementById("inputBuscar4");
 let campo6 = document.getElementById("inputBuscar5");
@@ -688,13 +783,30 @@ let campo8 = document.getElementById("inputBuscar7");
 
 document.getElementById("autos").addEventListener('change', function() {
   let valor_select = this.value;
-  const campos = [campo1,campo2,campo3,campo4, campo5, campo6, campo7];
-  
+  const campos = [campo1,campo2,campo4, campo5, campo6, campo7];
+ 
   for (let campo of campos) {
     if (campo.value) {
       campo.value = "";
     }
   }
+
+
+
+let cantidadSelect1 = document.getElementById('cantidad1')
+cantidadSelect1.value='1'
+let cantidadSelect2 = document.getElementById('cantidad2')
+cantidadSelect2.value='1'
+let cantidadSelect3 = document.getElementById('cantidad3')
+cantidadSelect3.value='1'
+let cantidadSelect4 = document.getElementById('cantidad4')
+cantidadSelect4.value='1'
+let cantidadSelect5 = document.getElementById('cantidad5')
+cantidadSelect5.value='1'
+let cantidadSelect6 = document.getElementById('cantidad6')
+cantidadSelect6.value='1'
+
+  
 
   
   if (valor_select == "goltrend") {
@@ -722,10 +834,20 @@ document.getElementById("autos").addEventListener('change', function() {
   }
   if (valor_select == "amarok20(2015>)") {
     campo1.value ="172795";
-    campo2.value = "172795";
+    
     campo5.value = "15407";
     campo6.value = "15169";
     campo7.value = "4011558353834";
+
+    const valorDeseadoStr = "2"; // El valor deseado como cadena
+    const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+    selectElement1.value = valorDeseadoStr;
+    
+    
+
+
+
+
     
   }
   if (valor_select == "gol16") {
@@ -815,10 +937,17 @@ document.getElementById("autos").addEventListener('change', function() {
   }
   if (valor_select == "amarok20(2014-)") {
     campo1.value ="172795";
-    campo2.value = "172795";
+   
     campo5.value = "15407";
     campo6.value = "15169";
     campo7.value = "15648";
+
+
+    const valorDeseadoStr = "2"; // El valor deseado como cadena
+    const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+    selectElement1.value = valorDeseadoStr;
+    
+
     
   }
   if (valor_select == "aveog3") {
@@ -836,9 +965,21 @@ document.getElementById("autos").addEventListener('change', function() {
   }
   if (valor_select == "ranger32") {
     campo1.value ="171895";
-    campo2.value ="171895";
-    campo3.value ="171896";
-    campo4.value ="171896";
+    campo2.value ="171896";
+   
+   
+   
+    const valorDeseadoStr = "2"; // El valor deseado como cadena
+const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+selectElement1.value = valorDeseadoStr;
+const valorDeseadoStr1 = "2"; // El valor deseado como cadena
+const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
+selectElement2.value = valorDeseadoStr1;
+
+
+
+
+
     campo5.value = "15404";
     campo6.value = "15420";
     campo7.value = "16424";
@@ -846,8 +987,12 @@ document.getElementById("autos").addEventListener('change', function() {
   }
   if (valor_select == "ranger22d") {
     campo1.value ="171895";
-    campo2.value ="171895";
-    campo3.value ="171896";
+    campo2.value ="171896";
+    const valorDeseadoStr = "2"; // El valor deseado como cadena
+const selectElement = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+selectElement.value = valorDeseadoStr;
+
+    
     campo5.value = "15404";
     campo6.value = "15420";
     campo7.value = "16424";
@@ -876,10 +1021,18 @@ document.getElementById("autos").addEventListener('change', function() {
   if (valor_select == "oroch20") {
     campo1.value ="172995";
     campo2.value ="172996";
-    campo3.value ="172996";
+   
     campo5.value = "18624";
     campo6.value = "16252";
     campo7.value = "15141";
+
+
+  
+    const valorDeseadoStr1 = "2"; // El valor deseado como cadena
+    const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
+    selectElement2.value = valorDeseadoStr1;
+    
+
     
   }
   if (valor_select == "celta") {
@@ -1027,10 +1180,16 @@ document.getElementById("autos").addEventListener('change', function() {
      }
      if (valor_select == "hilux30") {
      campo1.value ="172695";
-     campo2.value ="172695";
+     
      campo5.value = "15143";
      campo6.value = "18931";
      campo7.value = "18886";
+
+     const valorDeseadoStr = "2"; // El valor deseado como cadena
+     const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+     selectElement1.value = valorDeseadoStr;
+     
+
      
      }
      if (valor_select == "sandero8v") {
@@ -1093,10 +1252,17 @@ document.getElementById("autos").addEventListener('change', function() {
      }      
      if (valor_select == "s10duramax") {
       campo1.value ="171795";                               
-      campo2.value ="171795";
+      
       campo5.value = "15980";
       campo6.value = "4011558061852";
       campo7.value = "765809302945";
+
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
+      
      
      }        
      if (valor_select == "paliosiena16") {
@@ -1132,11 +1298,19 @@ document.getElementById("autos").addEventListener('change', function() {
      }      
      if (valor_select == "ranger30pe") {
       campo1.value ="171895";                               
-      campo2.value ="171895";
-      campo3.value ="171896";
+      campo2.value ="171896";
+      
       campo5.value = "18956";
       campo6.value = "18073";
       campo7.value = "18123";
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
+      
+
+
      
      } 
      if (valor_select == "hrv2") {
@@ -1154,10 +1328,17 @@ document.getElementById("autos").addEventListener('change', function() {
      if (valor_select == "vento25") {
       campo1.value ="172795";                               
       campo2.value ="172796";
-      campo3.value ="172796";
+      
       campo5.value ="18482";
       campo6.value = "18936";
       campo7.value = "18942";      
+
+      
+      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
+      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement2.value = valorDeseadoStr1;
+      
+
      
      } 
      if (valor_select == "golftsi14") {
@@ -1236,10 +1417,17 @@ document.getElementById("autos").addEventListener('change', function() {
      } 
     if (valor_select == "hilux24") {
       campo1.value ="172695"; 
-      campo2.value ="172696";                            
+                          
       campo5.value ="15143";
       campo6.value ="15659";
       campo7.value ="4011558338503" 
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
+
+
        
     } 
     if (valor_select == "c420") {
@@ -1311,10 +1499,14 @@ document.getElementById("autos").addEventListener('change', function() {
     if (valor_select == "astra20diesel") {
       campo1.value ="176195";
       campo2.value ="176196"; 
-      campo3.value ="176196";               
+                
       campo5.value ="18486";
       campo6.value ="15529"; 
       campo7.value ="4011558055783"; 
+      
+      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
+      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement2.value = valorDeseadoStr1;
       
     } 
     if (valor_select == "ventodiesel") {
@@ -1343,10 +1535,17 @@ document.getElementById("autos").addEventListener('change', function() {
     if (valor_select == "jumpy") {
       campo1.value ="172995"; 
       campo2.value ="172996";    
-      campo3.value ="172996";     
+      
       campo5.value ="4011558067465";
       campo6.value ="4011558060053"; 
       campo7.value ="4011558077464"; 
+
+
+      
+      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
+      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement2.value = valorDeseadoStr1;
+      
       
     } 
     if (valor_select == "palio18") {
@@ -1366,10 +1565,17 @@ document.getElementById("autos").addEventListener('change', function() {
     } 
     if (valor_select == "s10mwm") {
       campo1.value ="176195";   
-      campo2.value ="176195";
+      
       campo5.value ="18570";
       campo6.value ="18040"; 
       campo7.value ="15142"; 
+
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
+      
       
     }
     if (valor_select == "compass24") {
@@ -1418,10 +1624,16 @@ document.getElementById("autos").addEventListener('change', function() {
     } 
     if (valor_select == "amarokv6") {
       campo1.value ="172795";
-      campo2.value = "172795";
+      
       campo5.value = "4011558056841";
       campo6.value = "15169";
       campo7.value = "4011558819705";
+
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
       
     }
     if (valor_select == "kangoo19") {
@@ -1528,10 +1740,16 @@ document.getElementById("autos").addEventListener('change', function() {
      }
      if (valor_select == "alaskan") {
       campo1.value ="172895";
-      campo2.value ="172895";
+      
       campo5.value = "16270";
       campo6.value = "4011558041311";
       campo7.value = "4011558064822";
+
+      const valorDeseadoStr = "2"; // El valor deseado como cadena
+      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
+      selectElement1.value = valorDeseadoStr;
+      
+
      }
      if (valor_select == "fluence16k4m") {
       campo1.value ="172995";
@@ -1578,25 +1796,49 @@ document.getElementById("autos").addEventListener('change', function() {
       campo6.value = "15412";
      }
 
-function actualizarDescripcion(campo,descripcionid,precioid) {
-  const codigo = campo.value;
-  const producto = productos.find((p) => p.codigo === codigo);
-  const price = productos.find((p) => p.codigo === codigo);
- 
-    document.getElementById(descripcionid).innerHTML = producto.descripcion;
-    document.getElementById(precioid).innerHTML = price.precio;
 
-}
 
-     actualizarDescripcion(campo1,'descripcion','precio')
-     actualizarDescripcion(campo2,'descripcion1','precio1')
-     actualizarDescripcion(campo3,'descripcion2','precio2')
-     actualizarDescripcion(campo4,'descripcion3','precio3')
-     actualizarDescripcion(campo5,'descripcion4','precio4')
-     actualizarDescripcion(campo6,'descripcion5','precio5')
-     actualizarDescripcion(campo7,'descripcion6','precio6')
+
+     function actualizarDescripcion(campo, descripcionId, precioId, selectId) {
+   
+      const codigo = campo.value;
+      const producto = productos.find((p) => p.codigo === codigo);
+    
+      if (producto) {
+        let selectElement = document.getElementById(selectId);
+       
+        const selectedValue = selectElement.value;
+        
+        // Verifica si el valor seleccionado es un número válido
+        const quantity = parseFloat(selectedValue);
+        
+        if (!isNaN(quantity)) {
+          const precioFinal = producto.precio * quantity;
+          document.getElementById(descripcionId).innerHTML = producto.descripcion;
+         
+          document.getElementById(precioId).innerHTML = precioFinal// Redondea el precio a dos decimales
+        } else {
+          Swal.fire('Valor seleccionado no válido');
+        }
+      } else {
+        Swal.fire('Código no encontrado');
+      }
+    }
+
+     actualizarDescripcion(campo1,'descripcion','precio','cantidad1')
+     actualizarDescripcion(campo2,'descripcion1','precio1','cantidad2')
+     
+     actualizarDescripcion(campo4,'descripcion3','precio3','cantidad3')
+     actualizarDescripcion(campo5,'descripcion4','precio4','cantidad4')
+     actualizarDescripcion(campo6,'descripcion5','precio5','cantidad5')
+     actualizarDescripcion(campo7,'descripcion6','precio6','cantidad6')
  
-  } )
+  
+  
+  
+  
+  
+    } )
 
 
 
