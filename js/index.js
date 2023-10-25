@@ -779,9 +779,23 @@ let campo8 = document.getElementById("inputBuscar7");
   });
 }*/
 
+
+
+
 ////ACA HICE OBJETOS CON CADA SELECCION DE AUTO CON SUS CODIGOS CORRESPONDIENTES Y SE AGREGUEN AL INPUT PARA LUEGO CLICKEAR TOTAL//////////////////////
 
 document.getElementById("autos").addEventListener('change', function() {
+
+function UpdateQuantity(value,quantity) {
+  const valorDeseadoStr = value; // El valor deseado como cadena
+   const selectElement1 = document.getElementById(quantity); // Reemplaza "tu_select_id" con el ID de tu select
+   selectElement1.value = valorDeseadoStr;
+     
+}
+  
+
+
+
   let valor_select = this.value;
   const campos = [campo1,campo2,campo4, campo5, campo6, campo7];
  
@@ -839,12 +853,10 @@ cantidadSelect6.value='1'
     campo6.value = "15169";
     campo7.value = "4011558353834";
 
-    const valorDeseadoStr = "2"; // El valor deseado como cadena
-    const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-    selectElement1.value = valorDeseadoStr;
-    
-    
 
+    
+    
+UpdateQuantity("2","cantidad1")
 
 
 
@@ -943,11 +955,8 @@ cantidadSelect6.value='1'
     campo7.value = "15648";
 
 
-    const valorDeseadoStr = "2"; // El valor deseado como cadena
-    const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-    selectElement1.value = valorDeseadoStr;
-    
-
+ 
+UpdateQuantity("2","cantidad1")
     
   }
   if (valor_select == "aveog3") {
@@ -969,14 +978,10 @@ cantidadSelect6.value='1'
    
    
    
-    const valorDeseadoStr = "2"; // El valor deseado como cadena
-const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-selectElement1.value = valorDeseadoStr;
-const valorDeseadoStr1 = "2"; // El valor deseado como cadena
-const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
-selectElement2.value = valorDeseadoStr1;
+ 
 
-
+UpdateQuantity("2","cantidad1")
+UpdateQuantity("2","cantidad2")
 
 
 
@@ -988,10 +993,8 @@ selectElement2.value = valorDeseadoStr1;
   if (valor_select == "ranger22d") {
     campo1.value ="171895";
     campo2.value ="171896";
-    const valorDeseadoStr = "2"; // El valor deseado como cadena
-const selectElement = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-selectElement.value = valorDeseadoStr;
-
+ 
+UpdateQuantity("2","cantidad1")
     
     campo5.value = "15404";
     campo6.value = "15420";
@@ -1028,11 +1031,9 @@ selectElement.value = valorDeseadoStr;
 
 
   
-    const valorDeseadoStr1 = "2"; // El valor deseado como cadena
-    const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
-    selectElement2.value = valorDeseadoStr1;
+   
     
-
+   UpdateQuantity("2","cantidad2")
     
   }
   if (valor_select == "celta") {
@@ -1118,6 +1119,7 @@ selectElement.value = valorDeseadoStr;
     }
    if (valor_select == "virtus16") {
     campo1.value ="172795";
+    campo2.value ="172796";
     campo5.value = "15502";
     campo6.value = "15979"; 
     
@@ -1185,11 +1187,8 @@ selectElement.value = valorDeseadoStr;
      campo6.value = "18931";
      campo7.value = "18886";
 
-     const valorDeseadoStr = "2"; // El valor deseado como cadena
-     const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-     selectElement1.value = valorDeseadoStr;
-     
-
+ 
+UpdateQuantity("2","cantidad1")
      
      }
      if (valor_select == "sandero8v") {
@@ -1258,9 +1257,7 @@ selectElement.value = valorDeseadoStr;
       campo7.value = "765809302945";
 
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
+     UpdateQuantity("2","cantidad1")
       
       
      
@@ -1304,12 +1301,9 @@ selectElement.value = valorDeseadoStr;
       campo6.value = "18073";
       campo7.value = "18123";
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
+   
       
-      
-
+UpdateQuantity("2","cantidad1")
 
      
      } 
@@ -1334,10 +1328,8 @@ selectElement.value = valorDeseadoStr;
       campo7.value = "18942";      
 
       
-      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
-      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement2.value = valorDeseadoStr1;
-      
+   
+      UpdateQuantity("2","cantidad2")
 
      
      } 
@@ -1422,11 +1414,9 @@ selectElement.value = valorDeseadoStr;
       campo6.value ="15659";
       campo7.value ="4011558338503" 
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
+    
       
-
+UpdateQuantity("2","cantidad1")
 
        
     } 
@@ -1504,10 +1494,7 @@ selectElement.value = valorDeseadoStr;
       campo6.value ="15529"; 
       campo7.value ="4011558055783"; 
       
-      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
-      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement2.value = valorDeseadoStr1;
-      
+  UpdateQuantity("2","cantidad2")
     } 
     if (valor_select == "ventodiesel") {
       campo1.value ="172795";
@@ -1542,9 +1529,7 @@ selectElement.value = valorDeseadoStr;
 
 
       
-      const valorDeseadoStr1 = "2"; // El valor deseado como cadena
-      const selectElement2 = document.getElementById("cantidad2"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement2.value = valorDeseadoStr1;
+      UpdateQuantity("2","cantidad2")
       
       
     } 
@@ -1571,10 +1556,7 @@ selectElement.value = valorDeseadoStr;
       campo7.value ="15142"; 
 
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
-      
+      UpdateQuantity("2","cantidad1")
       
       
     }
@@ -1630,10 +1612,7 @@ selectElement.value = valorDeseadoStr;
       campo7.value = "4011558819705";
 
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
-      
+     UpdateQuantity("2","cantidad1")
       
     }
     if (valor_select == "kangoo19") {
@@ -1745,10 +1724,8 @@ selectElement.value = valorDeseadoStr;
       campo6.value = "4011558041311";
       campo7.value = "4011558064822";
 
-      const valorDeseadoStr = "2"; // El valor deseado como cadena
-      const selectElement1 = document.getElementById("cantidad1"); // Reemplaza "tu_select_id" con el ID de tu select
-      selectElement1.value = valorDeseadoStr;
-      
+ 
+      UpdateQuantity("2","cantidad1")
 
      }
      if (valor_select == "fluence16k4m") {
@@ -1790,12 +1767,44 @@ selectElement.value = valorDeseadoStr;
       campo5.value = "15076";
       campo6.value = "4011558801830";
      }
+
+     if (valor_select == "equinox") {
+      campo1.value ="170995";
+      campo2.value ="170996";
+      campo5.value = "4011558094072";
+      
+     }
+
+     
+     if (valor_select == "30820nafta") {
+      campo1.value ="172995";
+      campo2.value ="172996";
+      campo5.value = "15067";
+      campo6.value = "18932";
+      campo7.value = "15141";
+     }
+     if (valor_select == "147") {
+      campo1.value ="174195";
+      campo5.value = "18643";
+      campo6.value = "18132";
+      campo7.value = "18697";
+     }
+
+
+
      if (valor_select == "qubo") {
       campo1.value ="172995";
       campo5.value = "15067";
       campo6.value = "15412";
      }
 
+
+     if (valor_select == "tiggo20") {
+      campo1.value ="176195";
+      campo2.value ="176196";
+      campo5.value = "18658";
+      
+     }
 
 
 
