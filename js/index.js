@@ -1,18 +1,60 @@
 /////////////////////////////ARRAY DE PRODUCTOS SERVER///////////////////////////////////////////////////////////////////////////////
 /////////// Esta Funcion Solicita el array de PRODUCTOS de la api que cree en Google Firebase///////////////////////////////////////
 
-/*function verProductosapi() {
-  fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
-    .then((response) => response.json())
-    .then((jsonResponse) => {
-      productosServer = jsonResponse;
-     let productosGuardados = localStorage.getItem('productos');
-      if (productosGuardados) {
-        let productosJSON = JSON.parse(productosGuardados);
-        productosJSON.forEach(producto => productos.push(producto));
-      }
-    productos = productos.concat(productosServer);
-    });
+
+
+// Escucha el evento de clic en el botón "Eliminar Local Storage"
+document.getElementById("eliminarLocalStorageButton").addEventListener("click", function() {
+  // Elimina el contenido del localStorage
+  localStorage.removeItem('excel');
+  // También puedes usar localStorage.clear() para eliminar todos los datos del localStorage
+
+  // Limpia la variable productos
+  productos = [];
+
+  // Realiza otras acciones si es necesario
+  console.log("Local Storage eliminado.");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////ok
+
+
+/*
+
+async function verProductosapi() {
+  try {
+    const response = await fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json");
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar los productos. Código de estado: ${response.status}`);
+    }
+    const jsonResponse = await response.json();
+    productosServer = jsonResponse;
+    productos = productosServer;
+    console.log(productos)
+  } catch (error) {
+    console.error(`Error al cargar los productos: ${error}`);
+  }
 }
 
 let productos = [];
@@ -20,16 +62,92 @@ let productosServer = [];
 
 verProductosapi();
 */
-//const XLSX = require("xlsx");
+
+
+/////////////////////////////////////////////////////ok////////////////
+
+
+// Puedes acceder a "productos" después de que la carga esté completa
+// Al cargar la página, verifica si hay productos almacenados en el localStorage
+const productosAlmacenados = localStorage.getItem('excel');
+
+if (productosAlmacenados) {
+  // Si hay productos en el localStorage, cárgalos
+  productos = JSON.parse(productosAlmacenados);
+} else {
+  // Si no hay productos en el localStorage, inicializa la variable productos
+  productos = [];
+}
+
+async function cargarProductosDesdeExcel() {
+  return new Promise((resolve, reject) => {
+    document.getElementById("uploadButton").addEventListener("click", async function() {
+      const fileInput = document.getElementById("fileInput");
+      const file = fileInput.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = async function(e) {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+
+          const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets[sheetName];
+          const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+          const producto = [];
+
+          // Assuming your Excel file has columns "nombre" and "precio"
+          jsonData.forEach(row => {
+            const codigo = row[0] !== undefined ? row[0].toString() : '';
+            const descripcion = row[1]!== undefined ? row[1].toString() : '';
+            const precio = row[5] !== undefined ? row[5].toString() : '';
+          
+            producto.push({ codigo, descripcion, precio });
+            
+            // Agregar un objeto con valores vacíos si alguno de los campos es undefined
+            if (row[0] === undefined || row[1] === undefined || row[5] === undefined) {
+              producto.push({ codigo: "", descripcion: "", precio: "" });
+            }
+          });
+
+          productos = producto; // Actualiza la variable productos fuera de la función
+
+          console.log("Productos cargados desde el archivo Excel:", producto);
+
+          // Después de cargar los productos, guárdalos en el localStorage
+          localStorage.setItem('excel', JSON.stringify(producto));
+
+          resolve(producto); // Resuelve la promesa cuando se han cargado los productos
+
+          // Puedes realizar otras acciones con los productos aquí
+        };
+
+        reader.readAsArrayBuffer(file);
+      } else {
+        reject("No se seleccionó ningún archivo."); // Rechaza la promesa si no se seleccionó ningún archivo
+      }
+    });
+  });
+}
+
+// Uso de la función cargarProductosDesdeExcel() con async/await
+(async () => {
+  try {
+    const productosCargados = await cargarProductosDesdeExcel();
+    // Puedes acceder a los productos cargados aquí
+    console.log("Productos cargados desde el archivo Excel:", productosCargados);
+  } catch (error) {
+    console.error("Error al cargar los productos desde el archivo Excel:", error);
+  }
+})();
 
 
 
 
-
-
-
-
-
+/////////////////////////////ok////////////////////
+/*
 function verProductosapi() {
  fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
  .then((response) => response.json())
@@ -44,7 +162,7 @@ let productos = [];
 let productosServer = [];
 
 verProductosapi();
-
+*/
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
 
 
@@ -613,21 +731,22 @@ document.getElementById("boton6").click();
   document.getElementById("boton6").click();
  }    
 ///////ESTA FUNCION BUSCA UNA CADENA EN DESCRIPCION DEL ARRAY Y DEVUELVE LAS COINCIDENCIAS EN UNA LI MOSTRANDO CODIGO-DESCRIPCION//////
-
 function buscarDescripcion() {
   const resultados = [];
   const busqueda = document.getElementById('buscarInput').value.toLowerCase();
-  for (let i = 0; i < productos.length; i++) {
-    if (productos[i].descripcion.toLowerCase().includes(busqueda)) {
- //     resultados.push(`<li>${productos[i].codigo} - ${productos[i].descripcion} -$ ${productos[i].precio} </li>`);
  
 
-// resultados.push(`<li class="list-group-item list-group-item-primary">${productos[i].codigo} - ${productos[i].descripcion} - $ ${productos[i].precio} </li>`);
-resultados.push(`
-  <li class="list-group-item list-group-item-primary">
-    <button class="btn btn-primary" onclick="copyToClipboard('${productos[i].codigo}')">${productos[i].codigo}</button>
-    - ${productos[i].descripcion} - $ ${productos[i].precio}
-  </li>
+  for (let i = 0; i < productos.length; i++) {
+    const descripcion = productos[i].descripcion;
+
+    // Verifica que la descripción no sea undefined y conviértela a minúsculas
+    if (descripcion !== undefined && descripcion.toLowerCase().includes(busqueda)) {
+      resultados.push(`
+        <li class="list-group-item list-group-item-primary">
+          <button class="btn btn-primary" onclick="copyToClipboard('${productos[i].codigo}')">${productos[i].codigo}</button>
+          - ${descripcion} - $ ${productos[i].precio}
+        </li>
+
 `);
 
  
