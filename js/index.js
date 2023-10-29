@@ -1,26 +1,61 @@
 /////////////////////////////ARRAY DE PRODUCTOS SERVER///////////////////////////////////////////////////////////////////////////////
 /////////// Esta Funcion Solicita el array de PRODUCTOS de la api que cree en Google Firebase///////////////////////////////////////
 
-/*function verProductosapi() {
-  fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
-    .then((response) => response.json())
-    .then((jsonResponse) => {
-      productosServer = jsonResponse;
-     let productosGuardados = localStorage.getItem('productos');
-      if (productosGuardados) {
-        let productosJSON = JSON.parse(productosGuardados);
-        productosJSON.forEach(producto => productos.push(producto));
-      }
-    productos = productos.concat(productosServer);
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////ok
+
+
+
+
+async function verProductosapi() {
+  try {
+    const response = await fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json");
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar los productos. Código de estado: ${response.status}`);
+    }
+    const jsonResponse = await response.json();
+    productosServer = jsonResponse;
+    productos = productosServer;
+    console.log(productos)
+  } catch (error) {
+    console.error(`Error al cargar los productos: ${error}`);
+  }
 }
 
 let productos = [];
 let productosServer = [];
 
 verProductosapi();
-*/
-//const XLSX = require("xlsx");
+
+
+
+/////////////////////////////////////////////////////ok////////////////
+
+
+// Puedes acceder a "productos" después de que la carga esté completa
 
 
 
@@ -28,8 +63,8 @@ verProductosapi();
 
 
 
-
-
+/////////////////////////////ok////////////////////
+/*
 function verProductosapi() {
  fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
  .then((response) => response.json())
@@ -44,7 +79,7 @@ let productos = [];
 let productosServer = [];
 
 verProductosapi();
-
+*/
 ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
 
 
