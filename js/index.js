@@ -24,33 +24,48 @@ verProductosapi();
 
 
 
+let productos = [];
+let productosServer = [];
+let PREMIUM = 0;
 
+function pricePremium() {
+  const codigo = "12167";
+  const premium = productos.find(p => p.codigo === codigo);
 
-
-
-
+  if (premium) {
+    PREMIUM = Number(premium.precio); // Convierte el precio a número
+  } else {
+    // Puedes manejar el caso en el que no se encuentra el producto
+    // Por ejemplo, establecer PREMIUM en un valor por defecto.
+    PREMIUM = 0; // O cualquier otro valor numérico por defecto
+  }
+}
 
 function verProductosapi() {
   fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
-  .then((response) => response.json())
-  .then((jsonResponse) => {
-  productosServer = jsonResponse;
-  productos = productosServer;  
- 
- })
- 
- }
- let productos = [];
- let productosServer = [];
- 
- verProductosapi();
- 
- ///////////ES EL VALOR ADICIONAL DEL SERVICIO PREMIUM///////////////////////////////////////////////
- 
- 
- const PREMIUM = 3500
- 
- 
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      productosServer = jsonResponse;
+      productos = productosServer;
+
+      // Llama a pricePremium() después de cargar los productos
+      pricePremium();
+      console.log(PREMIUM); // Imprime el valor de PREMIUM después de que se haya actualizado
+    });
+}
+
+verProductosapi();
+
+
+
+
+
+
+
+
+
+
+
  //////////////////////ESTA FUNCION REFRESCA LA PAGINA////////////////////////////////////////////////////
  
  function refrescarPagina() {
