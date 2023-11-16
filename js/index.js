@@ -690,7 +690,7 @@ verProductosapi();
    
    let inputBuscar = document.getElementById("inputBuscar");
    let inputBuscar1 = document.getElementById("inputBuscar1");
-   let inputBuscar2 = document.getElementById("inputBuscar2");
+   //let inputBuscar2 = document.getElementById("inputBuscar2");
    let inputBuscar3 = document.getElementById("inputBuscar3");
    
    if (inputBuscar.value === "103899" || inputBuscar.value ==="103896") {
@@ -854,7 +854,7 @@ if (valor_select == "suran8v") {
 }
 if (valor_select == "suran16v") {
   campo1.value ="172795";
-  campo1.value ="172796";
+  campo2.value ="172796";
   campo5.value = "15502";
   campo6.value = "15979";
   campo7.value = "18739";
