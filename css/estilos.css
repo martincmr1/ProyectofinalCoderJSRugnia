@@ -6,11 +6,14 @@
  
  
  
- #floatingInputGrid {
+ /*#floatingInputGrid {
   width: 250px;
   height: 15px;
-  display: inline;               
- }
+  display: inline;       
+  
+  
+  
+ }*/
  .icono_elaion {
   display: none;
   height: 30px;
@@ -228,7 +231,10 @@
 
 
 
-
+#floatingInputGrid{
+height: 40px;
+width: 100px;
+}
 
 
 
@@ -276,9 +282,17 @@
   .coches {
     padding-left: 20px;
   }
- 
- 
- 
+
+  button {
+    transition: transform 0.1s;
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+  }
+  
+  
+
   @media print {
     body {
       width: 21cm;

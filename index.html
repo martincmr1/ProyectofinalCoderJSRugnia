@@ -2,15 +2,25 @@
 <html lang="es">
 <head>
   <!--<script src="html2pdf.js"></script> -->
+  <script src="./js/xlsx.mini.js"></script>
+  
  
+
+  
+
+
+
+
+
+
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  <script src="https://kit.fontawesome.com/302e8bad55.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/302e8bad55.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+ <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
     
-    
+ <link rel="stylesheet" href="./css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,16 +61,20 @@
                                 <div class="col-md-1 col-1 col-sm-1 col-1 col-xl-1">
                                  <p>Vehículo</p>
                              </div>                    
-                              <div class="col-md-7 col-7 col-sm-7 col-xl-7">                 
+                              <div class="col-md-7 col-7 col-sm-7 col-xl-7" id="Inputmanual ">                 
                                <select class="form-select form-select-sm mb-3 coches" aria-label=".form-select-sm example" id="autos">
                                 <option selected><p id="recargarPagina" style="display:none;"></p></option>
-                                 <optgroup label="CHEVROLET">
-                                  
+                                 <hr>
+                                <optgroup label="CHEVROLET">
+                                  <hr>
                                   <option value="corsaclassic">Chevrolet Agile</option>
                                   <option value="astra20nafta">Chevrolet Astra 2.0 nafta</option>
                                   <option value="astra20diesel">Chevrolet Astra 2.0 diesel </option>
                                   <option value="aveog1">Chevrolet Aveo G1</option> 
                                   <option value="aveog3">Chevrolet Aveo G3</option>
+                                  <option value="captiva24n">Chevrolet Captiva 2.4 N +2011</option>
+                                  <option value="cobalt18n">Chevrolet Cobalt 1.8 N</option>
+                                  <option value="cobaltd">Chevrolet Cobalt 1.3 Diesel</option>
                                   <option value="corsaclassic">Chevrolet Corsa Classic 1.4 -1.6</option>
                                   <option value="meriva18">Chevrolet Corsa 2 1.8</option>
                                   <option value="merivad">Chevrolet Corsa 2 Diesel</option>
@@ -70,10 +84,12 @@
                                   <option value="equinox">Chevrolet Equinox 1.5T</option>
                                   <option value="meriva18">Chevrolet Meriva 1.8 </option>
                                   <option value="merivad">Chevrolet Meriva Diesel </option>
+                                  <option value="montana18">Chevrolet Montana 1.8 N </option>
                                   <option value="tracker12">Chevrolet Onix 1.2- 1.0 </option>
                                   <option value="prisma/onix1.4/spin1.8">Chevrolet Onix 1.4 </option>
                                   <option value="prisma/onix1.4/spin1.8">Chevrolet Prisma 1.4 </option>
                                   <option value="spark12">Chevrolet Spark 1.2 </option>
+                                  <option value="cobaltd">Chevrolet Spin 1.3 Diesel</option>
                                   <option value="prisma/onix1.4/spin1.8">Chevrolet Spin 1.8</option>
                                   <option value="s10mwm">Chevrolet S10 2.8 MWM </option>
                                   <option value="s10duramax">Chevrolet S10 2.8 (DURAMAX)</option>
@@ -82,12 +98,16 @@
                                   <option value="tracker18">Chevrolet Tracker 1.8</option>
 
                                 </optgroup>
+                                <hr>
                                 <optgroup label="CHERY">
+                                  <hr>
                                   <option value="tiggo20">Chery Tiggo 2.0 </option>
 
                                   
                                 </optgroup>
+                                <hr>
                                 <optgroup label="CITROEN">
+                                  <hr>
                                   <option value="c3nafta">Citroen Berlingo 1.4 / 1.6 nafta</option>
                                   <option value="berlingo19">Citroen Berlingo 1.9 d </option>
                                  <option value="berlingohdi">Citroen Berlingo hdi 1.6 </option>
@@ -101,7 +121,9 @@
                                  <option value="c420">Citroen C4 2.0 nafta</option>   
                                  <option value="jumpy">Citroen Jumpy hdi 1.6 </option>     
                                </optgroup>
+                               <hr>
                                <optgroup label="FIAT">
+                                <hr>
                                 <option value="147">Fiat 147/SPAZIO nafta</option>
                                 <option value="argo/cronos13">Fiat Argo 1.3 firefly</option>
                                  <option value="argo/cronos18">Fiat Argo 1.8</option>
@@ -113,12 +135,15 @@
                                  <option value="paliosiena14">Fiat Fiorino 1.4-1.3 fire</option>
 
 
-
+                               
                                  <option value="mobi">Fiat MOBI </option>
+                                
                                  <option value="paliosiena14">Fiat Palio 1.4-1.3 fire</option>
                                  <option value="paliosiena16">Fiat Palio 1.6 e-Torq</option>
                                  <option value="palio18">Fiat Palio 1.8 GM</option>
                                  <option value="paliodiesel">Fiat Palio 1.7 DIESEL</option>
+                                 <option value="pulse10">Fiat Pulse 1.0 T</option>
+                                 <option value="pulse13">Fiat Pulse 1.3 </option>
                                  <option value="punto14">Fiat Punto 1.4 fire</option>
                                  <option value="paliosiena16">Fiat Punto 1.6 e-Torq</option>
                                  <option value="qubo">Fiat Qubo 1.4</option>
@@ -127,14 +152,18 @@
                                  <option value="palio18">Fiat Siena 1.8 GM</option>
                                  <option value="paliodiesel">Fiat Siena 1.7 DIESEL</option>
                                  <option value="paliosiena16">Fiat Strada 1.6 e-Torq</option>
+                                 <option value="argo/cronos13">Fiat Strada 1.3 firefly</option>
                                  <option value="torod">Fiat Toro Diesel</option>
-                                 <option value="toron">Fiat Toro Nafta 1.8</option>
+                                 <option value="toron">Fiat Toro Nafta 1.8 e-torq</option>
+                                 <option value="toro13">Fiat Toro 1.3 N</option>
                                  <option value="unofire">Fiat Uno fire </option>
                                  <option value="nuevouno">Fiat  Uno NOVO </option>
                                  <option value="argo/cronos13">Fiat Uno firefly</option>
                                  <option value="500multiair">Fiat 500 1.4 multiair </option>
                               </optgroup>
+                              <hr>
                               <optgroup label="FORD">
+                                <hr>
                                 <option value="bronco15">Ford Bronco 1.5 Ecoboost</option>
                                 <option value="bronco20">Ford Bronco 2.0 Ecoboost</option>
                                 <option value="ecosport14d">Ford Ecosport 1.4 diesel</option>
@@ -159,29 +188,42 @@
                                 <option value="ranger30pe">Ford Ranger 3.0 diesel</option>
                                 <option value="ranger22d">Ford Ranger 2.2 diesel </option>  
                                 <option value="ranger32">Ford Ranger 3.2 diesel</option>  
+                                <option value="rangereco20">Ford Ranger 2.0 diesel 2023+</option>
                                 <option value="raptor">Ford Raptor</option>                                                  
                               </optgroup>
+                              <hr>
                               <optgroup label="HONDA">
+                                <hr>
                                 <option value="hrv2">Honda hrv II 1.8</option>
                                 <option value="fit15">Honda Fit 1.5 / City</option>
                                 <option value="civicvtec">Honda Civic 1.8 2.0 vtec</option>
                               </optgroup>
+
+                              <hr>
                               <optgroup label="JEEP">
+                                <hr>
                                 <option value="renegadenafta">Jeep Renegade 1.8 NAFTA</option>
                                 <option value="renegadediesel">Jeep Renegade 2.0 DIESEL</option>
                                 <option value="compass24">Jeep Compass 2.4</option>
                               </optgroup>
+                              <hr>
                               <optgroup label="NISSAN">
+                                <hr>
+                                <option value="alaskan">Nissan Frontier 2.3 dci </option>
                                 <option value="tiida">Nissan Tiida</option>
                                 <option value="march">Nissan March / Versa</option>
                                 <option value="kicks">Nissan Kicks 1.6</option>
                                 <option value="note">Nissan Note 1.6</option>
                               </optgroup>
+                              <hr>
                           <optgroup label="PEUGEOT">
+                            <hr>
                             <option value="20716">Peugeot 206 / 207 1.6 16v /307 1.6 16v</option>
                             <option value="20714">Peugeot 207 1.4 8v </option>
                             <option value="20719d">Peugeot 207 1.9 diesel </option> 
                             <option value="208n">Peugeot 208 16v vti/8v </option>
+                            <option value="208ii12">Peugeot 208 II  vti 1.2</option>
+                            
                             <option value="208iivti">Peugeot 208 II 16v vti 1.6</option>
                             <option value="208n">Peugeot 2008 16v vti</option>
                             <option value="30720hdi">Peugeot 307 2.0 hdi </option>
@@ -197,7 +239,9 @@
                             <option value="partner16">Peugeot Partner 1.4 8v / 1.6 16v </option>
                             <option value="partnerhdi">Peugeot Partner hdi 1.6 </option>
                           </optgroup> 
+                          <hr>
                           <optgroup label="RENAULT">
+                            <hr>
                             <option value="alaskan">Renault Alaskan 2.3 dci </option>
                             <option value="clio12">Renault Clio 1.2 / MIO </option>
                             <option value="kangoon">Renault Clio 1.6 16v </option>
@@ -215,24 +259,30 @@
                             <option value="kwid">Renault Kwid</option>
                             <option value="sandero8v">Renault Logan 8v</option>
                             <option value="kangoon">Renault Logan 1.6 16v </option>
+                            <option value="megane320">Renault Megane III 2.0 16v </option>
                             <option value="oroch20">Renault Oroch 2.0 </option>
                             <option value="sandero8v">Renault Sandero 8v</option>
                             <option value="kangoon">Renault Sandero 16v </option>
                             <option value="kangoostepwayn">Renault Sandero +2020 </option>
                             <option value="kangoon">Renault Symbol 1.6 16v</option>
                           </optgroup> 
-
+<hr>
                             <optgroup label="SUSUKI"> 
+                              <hr>
                               <option value="celta">Susuki Fun </option>
                             </optgroup> 
-                         
+                         <hr>
                           <optgroup label="TOYOTA">
+                            <hr>
                             <option value="etios">Toyota Etios / Yaris </option>
                             <option value="corolla2011">Toyota Corolla 2011+</option>
+                            <option value="corollacross">Toyota Corolla Cross</option>
                             <option value="hilux30">Toyoya Hilux 3.0 / 2.5 D4D</option> 
-                            <option value="hilux24">Toyoya Hilux 2.4 TDI 2015+</option>
+                            <option value="hilux24">Toyoya Hilux 2.4 / 2.8 TDI 2015+</option>
                           </optgroup>  
+                          <hr>
                           <optgroup label="VOLKSWAGEN"> 
+                            <hr>
                             <option value="amarok20(2014-)">Volkswagen Amarok 2.0 2014- </option>
                             <option value="amarok20(2015>)">Volkswagen Amarok 2.0 2015+</option>
                             <option value="amarokv6">Volkswagen Amarok 3.0 V6</option>
@@ -266,14 +316,13 @@
                           </optgroup>  
 
 
-
-
                         </select> 
+                      
+                      
                       </div>                      
                        <div class="col-md-4 col-4 col-sm-4 col-xl-4 contenedor_patente ">
                         <div class="form-floating contenedor_patente">
-                         <input type="text" class="form-control" id="floatingInputGrid" placeholder="patente" value="">
-                         <label for="floatingInputGrid" style="display: inline;"></label>                        
+                     <input type="text" id="inputPatente">
                        </div>     
                      </div>
                    </div>
@@ -285,7 +334,7 @@
                    <tr id="fila1">
                    <th class="anchoColumna" scope="row">Lubricante</th>
                    <td><img id="icono_elaion" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf10" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf30" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf50" class="icono_elaion" src="./img/f50.jpg" alt=""><img id="icono_elaionfs50" class="icono_elaion" src="./img/ElaionFS540.png" alt=""><input type="number" id="inputBuscar">                    
-                    <button class="btn btn-primary" id="boton0">+ </button></td>
+                    <button class="btn btn-danger" id="boton01"> <i class="fas fa-trash-alt"></i>  </button> <button class="btn btn-primary" id="boton0">+ </button></td>
                    <td id="descripcion"></td>
                    <td><select id="cantidad1">
                     <!-- Agrega opciones numéricas según tus necesidades -->
@@ -307,7 +356,7 @@
                    <th scope="row">Lubricante</th>
                    <td>
                     <img id="icono_elaion1" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf101" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf301" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf501" class="icono_elaion" src="./img/f50.jpg" alt=""><img id="icono_elaionfs501" class="icono_elaion" src="./img/ElaionFS540.png" alt=""> <input type="number" id="inputBuscar1" > 
-                  <button class="btn btn-primary" id="boton1">+ </button> 
+                    <button class="btn btn-danger" id="boton02"> <i class="fas fa-trash-alt"></i>  </button><button class="btn btn-primary" id="boton1">+ </button> 
                    </td>
                    <td id="descripcion1"></td>
                    <td><select id="cantidad2">
@@ -330,8 +379,8 @@
                   <tr id="fila4">
                   <th scope="row">Otros</th>
                   <td>
-                    <img id="icono_elaion3" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf103" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf303" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf503" class="icono_elaion" src="./img/f50.jpg" alt=""> <img id="icono_kriox" class="icono_elaion" src="./img/kriox.png" alt=""><img id="icono_elaionfs503" class="icono_elaion" src="./img/ElaionFS540.png" alt=""><input type="number" id="inputBuscar3"> 
-                    <button class="btn btn-primary" id="boton3">+ </button></td>
+                    <img id="icono_elaion3" class="icono_elaion" src="./img/elaion.ico" alt=""><img id="icono_elaionf103" class="icono_elaion" src="./img/f10.jpg" alt=""><img id="icono_elaionf303" class="icono_elaion" src="./img/f30.jpg" alt=""><img id="icono_elaionf503" class="icono_elaion" src="./img/f50.jpg" alt=""> <img id="icono_kriox" class="icono_elaion" src="./img/kriox.png" alt=""><img id="icono_elaionfs503" class="icono_elaion" src="./img/ElaionFS540.png" alt=""><img id="icono_cabina" class="icono_elaion" src="./img/cabina.jpg" alt=""><input type="number" id="inputBuscar3"> 
+                    <button class="btn btn-danger" id="boton03"> <i class="fas fa-trash-alt"></i>  </button>   <button class="btn btn-primary" id="boton3">+ </button></td>
                   </td>
                   <td id="descripcion3"></td>
                   <td><select id="cantidad3">
@@ -355,7 +404,7 @@
                   <td>
                     <img id="icono_aceite" class="icono_aceite" src="./img/faceite.ico" alt="">
                     <input type="number" id="inputBuscar4"> 
-                    <button class="btn btn-primary" id="boton4">+  </button></td>
+                    <button class="btn btn-danger" id="boton04"> <i class="fas fa-trash-alt"></i>  </button> <button class="btn btn-primary" id="boton4">+  </button></td>
                   </td>
                   <td id="descripcion4"></td>
                   <td><select id="cantidad4">
@@ -378,7 +427,7 @@
                   <th scope="row">Filtro de Aire</th>
                 <td>
                   <img id="icono_aire" class="icono_aire" src="./img/faire.ico" alt=""><input type="number" id="inputBuscar5"> 
-                  <button class="btn btn-primary" id="boton5">+ </button>
+                  <button class="btn btn-danger" id="boton05"> <i class="fas fa-trash-alt"></i>  </button>  <button class="btn btn-primary" id="boton5">+ </button>
                 </td>
                 </td>
                 <td id="descripcion5" ></td>
@@ -405,7 +454,7 @@
                 <td>
                   <img id="icono_combustible" class="icono_combustible" src="./img/fcombustible.ico" alt="">
                   <input type="number" id="inputBuscar6"> 
-                  <button class="btn btn-primary" id="boton6">+ </button></td>
+                  <button class="btn btn-danger" id="boton06"> <i class="fas fa-trash-alt"></i>  </button>    <button class="btn btn-primary" id="boton6">+ </button></td>
                 </td>
                 <td id="descripcion6"></td>
                 <td><select id="cantidad6">
@@ -434,7 +483,7 @@
                   <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">  
                 </th>
                 <th>
-                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-danger" id="boton7">Calcular Presupuesto</button>
+                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary" id="boton7">Calcular Presupuesto <i class="fa-solid fa-calculator" style="color: #ffffff;"></i></button>
                 </th>
                 <th class="columnPadding" ></th>
               
@@ -454,7 +503,10 @@
         </div>
          <div>
           <input type="text" id="buscarInput" placeholder="Buscar por descripción">
-          <button id="boton8" class="btn btn-primary">Buscar</button> 
+          <button id="boton8" class="btn btn-primary">
+            Buscar <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+          </button>
+          
           <ul id="resultados"></ul>
         </div>    
      
@@ -473,18 +525,41 @@
       </form>  
      </div>
     </div> -->
+    
     <div class="contenedorCambio">
     <input type="text" id="direccioninput">
-    <button class="btn btn-success btnDireccion" id="boton10">Confirmar nueva dirección </button>
-  </div>
+    <button class="btn btn-success btnDireccion" id="boton10">Confirmar nueva dirección <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></button>
+  </div> 
   <div>
     <input type="text" id="telefonoinput">
-    <button class="btn btn-success btnTelefono" id="boton11">Confirmar nuevo Teléfono </button>
-  </div>
+    <button class="btn btn-success btnTelefono" id="boton11">Confirmar nuevo Teléfono <i class="fa-solid fa-mobile-retro" style="color: #ffffff;"></i></button>
+  </div> 
   <div id="contenedorBtnLimpiarStorage">
-      <button id="boton9"  type="submit" class="btn btn-secondary">Eliminar Datos</button>
+      <button id="boton9"  type="submit" class="btn btn-secondary">Eliminar Direccion y teléfono <i class="fas fa-trash-alt"></i></button>
     </div>
-      </div>  
+
+<div id="excel">
+        
+        
+        
+      
+          
+
+          <div><button class="btn btn-secondary" id="eliminarLocalStorageButton">Eliminar base de productos    <i class="fas fa-trash-alt"></i></button></div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+
+
+      
       <div class="container diagnosticos_contenedor" style="display:none;" id="diagnosticos_contenedor">   
         <div class="row">
           <div class="col border border-success-subtle">
@@ -583,8 +658,22 @@
                 </div>   
     <footer> 
       
-    
       
+<div id="interest">
+      
+      <input type="number" id="fee" placeholder="Ingrese interés">
+      <button class="btn btn-primary" onclick="guardarInteres()">Guardar Interés</button>
+      
+      <button class="btn btn-danger" onclick="eliminarInteres()">Eliminar Interés</button>
+
+        
+    </div>
+
+
+
+
+
+    
     
 
     </footer>
@@ -615,6 +704,7 @@
 
 
 
+   
 
 
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -625,7 +715,7 @@
 
 
 
-
+      <script src="./js/bootstrap.min.js"></script>
 
 
 
