@@ -2012,6 +2012,8 @@ document.getElementById("autos").addEventListener("change", function () {
     campo5.value = "15442";
     campo6.value = "15420";
     campo7.value = "18726";
+
+    UpdateQuantity("2", "cantidad2");
   }
   if (valor_select == "civicvtec") {
     campo1.value = "170995";
