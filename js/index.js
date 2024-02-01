@@ -1605,7 +1605,7 @@ document.getElementById("autos").addEventListener("change", function () {
     campo5.value = "15353";
     campo6.value = "15350";
     campo7.value = "18711";
-    rangereco20
+    
   }
 
 
