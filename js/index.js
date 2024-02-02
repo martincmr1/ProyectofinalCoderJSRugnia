@@ -1201,13 +1201,13 @@ document.getElementById("autos").addEventListener("change", function () {
 
   if (valor_select == "goltrend") {
     campo1.value = "172795";
-    campo5.value = "4011558729509";
+    campo5.value = "18595";
     campo6.value = "18958";
     campo7.value = "15424";
   }
   if (valor_select == "suran8v") {
     campo1.value = "172795";
-    campo5.value = "4011558729509";
+    campo5.value = "18595";
     campo6.value = "18958";
     campo7.value = "18739";
   }
