@@ -1272,6 +1272,14 @@ document.getElementById("autos").addEventListener("change", function () {
 
    
   }
+  if (valor_select == "corolla20") {
+    campo1.value = "172895";
+    campo2.value = "172896";
+    campo5.value = "18581";
+    campo6.value = "4011558802431";
+
+   
+  }
   if (valor_select == "toro13") {
     campo1.value = "170995";
     campo2.value = "170996";
