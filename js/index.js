@@ -1201,13 +1201,13 @@ document.getElementById("autos").addEventListener("change", function () {
 
   if (valor_select == "goltrend") {
     campo1.value = "172795";
-    campo5.value = "18595";
+    campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "15424";
   }
   if (valor_select == "suran8v") {
     campo1.value = "172795";
-    campo5.value = "18595";
+    campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "18739";
   }
@@ -1746,7 +1746,7 @@ document.getElementById("autos").addEventListener("change", function () {
   if (valor_select == "unofire") {
     campo1.value = "171895";
     campo5.value = "18572";
-    campo6.value = "18197";
+    campo6.value = "7893390200227";
     campo7.value = "18714";
   }
   if (valor_select == "nuevouno") {
