@@ -632,7 +632,7 @@ function sumarPrecios1() {
       "$" +
       precioTotal2.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>*3</b> cuotas sin interés de</span> $' +
+      ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de</span> $' +
       (precioTotal2 / 3).toFixed(0) +
       "</small>";
   } else {
@@ -640,7 +640,7 @@ function sumarPrecios1() {
       "$" +
       precioTotal2.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>*3</b> cuotas de</span> $' +
+      ' <small><span style="font-weight: normal;"><b>3</b> cuotas de</span> $' +
       ((precioTotal2 * (1 + feeInterest / 100)) / 3).toFixed(0) +
       "</small>";
   }
@@ -701,7 +701,7 @@ function sumarPrecios2() {
       "$" +
       precioTotal.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>*3</b> cuotas sin interés de </span> $' +
+      ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de </span> $' +
       (precioTotal / 3).toFixed(0) +
       "</small>";
   } else {
@@ -709,7 +709,7 @@ function sumarPrecios2() {
       "$" +
       precioTotal.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>*3</b> cuotas de</span> $' +
+      ' <small><span style="font-weight: normal;"><b>3</b> cuotas de</span> $' +
       ((precioTotal * (1 + feeInterest / 100)) / 3).toFixed(0) +
       "</small>";
   }
@@ -960,189 +960,23 @@ function ocultarInputs() {
 
 
 
-
-
-
-  
-  if (inputBuscar3.value === "103899" || inputBuscar3.value === "103896") {
+  if (inputBuscar3.value === "1" || inputBuscar3.value === "103896") {
     document.getElementById("icono_elaionf303").style.display = "flex";
-  } else if (
-    inputBuscar3.value === "176395" ||
-    inputBuscar3.value === "176396" ||
-    inputBuscar3.value === "174195" ||
-    inputBuscar3.value === "174196" ||
-    inputBuscar3.value === "174495" ||
-    inputBuscar3.value === "174496" ||
-    inputBuscar3.value === "176095" ||
-    inputBuscar3.value === "176096" ||
-    inputBuscar3.value === "176195" ||
-    inputBuscar3.value === "176196"
-  ) {
-    document.getElementById("icono_elaionfs503").style.display = "flex";
-  } else if (
-    inputBuscar3.value === "104099" ||
-    inputBuscar3.value === "104096" ||
-    inputBuscar3.value === "193299" ||
-    inputBuscar3.value === "193296"
-  ) {
-    document.getElementById("icono_elaionf503").style.display = "flex";
-  } else if (
-    inputBuscar3.value === "103799" ||
-    inputBuscar3.value === "103796" ||
-    inputBuscar3.value === "108099" ||
-    inputBuscar3.value === "108096"
-  )
-   {
-    document.getElementById("icono_elaionf103").style.display = "flex";
-
-
-
-
-  } else if (
-    inputBuscar3.value === "15099" ||
-    inputBuscar3.value === "15610" ||
-    inputBuscar3.value === "15545" ||
-    inputBuscar3.value === "15539" ||
-    inputBuscar3.value === "15557" ||
-    inputBuscar3.value === "15546" ||
-    inputBuscar3.value === "15192" ||
-    inputBuscar3.value === "15347" ||
-    inputBuscar3.value === "15348" ||
-    inputBuscar3.value === "15157" ||
-    inputBuscar3.value === "15111" ||
-    inputBuscar3.value === "15072" ||
-    inputBuscar3.value === "15086" ||
-    inputBuscar3.value === "15009" ||
-    inputBuscar3.value === "15128" ||
-    inputBuscar3.value === "15060" ||
-    inputBuscar3.value === "15136" ||
-    inputBuscar3.value === "15129" ||
-    inputBuscar3.value === "14787" ||
-    inputBuscar3.value === "14784" ||
-    inputBuscar3.value === "14795" ||
-    inputBuscar3.value === "14796" ||
-    inputBuscar3.value === "14797" ||
-    inputBuscar3.value === "14938" ||
-    inputBuscar3.value === "14677" ||
-    inputBuscar3.value === "14801" ||
-    inputBuscar3.value === "14802" ||
-    inputBuscar3.value === "14803" ||
-    inputBuscar3.value === "14806" ||
-    inputBuscar3.value === "11908" ||
-    inputBuscar3.value === "11907" ||
-    inputBuscar3.value === "14169" ||
-    inputBuscar3.value === "11977" ||
-    inputBuscar3.value === "11978" ||
-    inputBuscar3.value === "14779" ||
-    inputBuscar3.value === "14780" ||
-    inputBuscar3.value === "15655" ||
-    inputBuscar3.value === "4011558078331" ||
-    inputBuscar3.value === "4011558807405" ||
-    inputBuscar3.value === "4011558308407" ||
-    inputBuscar3.value === "15576" ||
-    inputBuscar3.value === "15646" ||
-    inputBuscar3.value === "4011558540906" ||
-    inputBuscar3.value === "15652" ||
-    inputBuscar3.value === "4011558093266" ||
-    inputBuscar3.value === "4011558073206" ||
-    inputBuscar3.value === "15422" ||
-    inputBuscar3.value === "15610" ||
-    inputBuscar3.value === "7893390206144" ||
-    inputBuscar3.value === "4011558312602" ||
-    inputBuscar3.value === "4011558258801" ||
-    inputBuscar3.value === "16273" ||
-    inputBuscar3.value === "4011558816797" ||
-    inputBuscar3.value === "4011558002039" ||
-    inputBuscar3.value === "15653" ||
-    inputBuscar3.value === "4011558029081" ||
-    inputBuscar3.value === "4011558042998" ||
-    inputBuscar3.value === "16230" ||
-    inputBuscar3.value === "16240" ||
-    inputBuscar3.value === "4011558089368" ||
-    inputBuscar3.value === "16236" ||
-    inputBuscar3.value === "15642" ||
-    inputBuscar3.value === "15425" ||
-    inputBuscar3.value === "16295" ||
-    inputBuscar3.value === "16231" ||
-    inputBuscar3.value === "4011558542504" ||
-    inputBuscar3.value === "15577" ||
-    inputBuscar3.value === "4011558306502" ||
-    inputBuscar3.value === "4011558311209" ||
-    inputBuscar3.value === "15427" ||
-    inputBuscar3.value === "4011558250003" ||
-    inputBuscar3.value === "4011558311902" ||
-    inputBuscar3.value === "4011558307301" ||
-    inputBuscar3.value === "15651" ||
-    inputBuscar3.value === "7893390206601" ||
-    inputBuscar3.value === "4011558032265" ||
-    inputBuscar3.value === "4011558030971" ||
-    inputBuscar3.value === "16289" ||
-    inputBuscar3.value === "4011558061197" ||
-    inputBuscar3.value === "4011558031367" ||
-    inputBuscar3.value === "4011558072025" ||
-    inputBuscar3.value === "4011558078300" ||
-inputBuscar3.value === "4011558078423" ||
-inputBuscar3.value === "4011558012915" ||
-inputBuscar3.value === "4011558405700" ||
-inputBuscar3.value === "4011558300807" ||
-inputBuscar3.value === "4011558807948" ||
-inputBuscar3.value === "4011558066659" ||
-inputBuscar3.value === "15572" ||
-inputBuscar3.value === "15445" ||
-inputBuscar3.value === "15444" ||
-inputBuscar3.value === "15530" ||
-inputBuscar3.value === "16254" ||
-inputBuscar3.value === "15137" ||
-inputBuscar3.value === "7790184752309" ||
-inputBuscar3.value === "15386" ||
-inputBuscar3.value === "4011558308902" ||
-inputBuscar3.value === "18507" ||
-inputBuscar3.value === "4011558006600" ||
-inputBuscar3.value === "15014" ||
-inputBuscar3.value === "16305" ||
-inputBuscar3.value === "15346" ||
-inputBuscar3.value === "15540" 
-
-
-    
-  )
-   {
+  } else {
     document.getElementById("icono_cabina").style.display = "flex";
-
-
-
-
-
-
-
-
-
-
-
-
-
-  } else if (
-    inputBuscar3.value === "185496" ||
-    inputBuscar3.value === "184596" ||
-    inputBuscar3.value === "504896" ||
-    inputBuscar3.value === "114731" ||
-    inputBuscar3.value === "186631" ||
-    inputBuscar3.value === "186696" ||
-    inputBuscar3.value === "114796" ||
-    inputBuscar3.value === "185296"
-  ) {
-    document.getElementById("icono_kriox").style.display = "flex";
-
-    
-    
-  } else document.getElementById("icono_elaion3").style.display = "flex";
-
-  /*document.getElementById("agregarProductos").style.display = "none"; */
+  }
+  
   document.getElementById("logo_aca").style.display = "flex";
   document.getElementById("logo_credito").style.display = "flex";
   document.getElementById("logo_escalonado").style.display = "flex";
   document.getElementById("logo_cosmetica").style.display = "flex";
+  
+
+
 }
+
+
+  
 
 /* setTimeout (() => {
      refrescarPagina()
@@ -1201,12 +1035,14 @@ document.getElementById("autos").addEventListener("change", function () {
 
   if (valor_select == "goltrend") {
     campo1.value = "172795";
+    campo4.value = "4011558807948";
     campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "15424";
   }
   if (valor_select == "suran8v") {
     campo1.value = "172795";
+    campo4.value = "4011558807948";
     campo5.value = "4011558729509";
     campo6.value = "18958";
     campo7.value = "18739";
@@ -1214,6 +1050,7 @@ document.getElementById("autos").addEventListener("change", function () {
   if (valor_select == "suran16v") {
     campo1.value = "172795";
     campo2.value = "172796";
+    campo4.value = "4011558807948";
     campo5.value = "15502";
     campo6.value = "15979";
     campo7.value = "18739";
@@ -1758,7 +1595,7 @@ document.getElementById("autos").addEventListener("change", function () {
   if (valor_select == "ecosport20kinetic") {
     campo1.value = "171895";
     campo2.value = "171896";
-    campo5.value = "15442";
+    campo5.value = "15400";
     campo6.value = "4011558077648";
     campo7.value = "18726";
   }
@@ -2046,7 +1883,7 @@ document.getElementById("autos").addEventListener("change", function () {
   if (valor_select == "ranger25") {
     campo1.value = "171895";
     campo2.value = "171896";
-    campo5.value = "15442";
+    campo5.value = "15400";
     campo6.value = "15420";
     campo7.value = "18726";
 
