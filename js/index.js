@@ -1402,6 +1402,7 @@ document.getElementById("autos").addEventListener("change", function () {
   }
   if (valor_select == "corolla2011") {
     campo1.value = "172895";
+    campo2.value = "172896";
     campo5.value = "15521";
     campo6.value = "15372";
   }
@@ -2008,8 +2009,22 @@ document.getElementById("autos").addEventListener("change", function () {
     campo6.value = "15550";
     campo7.value = "4011558080860"
   }
-
-
+  if (valor_select == "vento20t") {
+    campo1.value = "172795";
+    campo2.value = "172796";
+    campo5.value = "4011558025656";
+    campo6.value = "15065";
+    campo7.value = "15389"
+    UpdateQuantity("2", "cantidad2");
+  }
+  if (valor_select == "koleos1") {
+    campo1.value = "172995";
+    campo2.value = "172996";
+    campo5.value = "18578";
+    campo6.value = "18160";
+    
+    UpdateQuantity("2", "cantidad2");
+  }
 
 
   if (valor_select == "tiggo20") {
