@@ -632,16 +632,16 @@ function sumarPrecios1() {
       "$" +
       precioTotal2.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de</span> $' +
-      (precioTotal2 / 3).toFixed(0) +
+      ' <small><span style="font-weight: normal;"><b>6</b> cuotas sin interés de</span> $' +
+      (precioTotal2 / 6).toFixed(0) +
       "</small>";
   } else {
     cuotasHTML1 =
       "$" +
       precioTotal2.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>3</b> cuotas de</span> $' +
-      ((precioTotal2 * (1 + feeInterest / 100)) / 3).toFixed(0) +
+      ' <small><span style="font-weight: normal;"><b>6</b> cuotas de</span> $' +
+      ((precioTotal2 * (1 + feeInterest / 100)) / 6).toFixed(0) +
       "</small>";
   }
   
@@ -701,16 +701,16 @@ function sumarPrecios2() {
       "$" +
       precioTotal.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>3</b> cuotas sin interés de </span> $' +
-      (precioTotal / 3).toFixed(0) +
+      ' <small><span style="font-weight: normal;"><b>6</b> cuotas sin interés de </span> $' +
+      (precioTotal / 6).toFixed(0) +
       "</small>";
   } else {
     cuotasHTML =
       "$" +
       precioTotal.toFixed(0) +
       "<br>" +
-      ' <small><span style="font-weight: normal;"><b>3</b> cuotas de</span> $' +
-      ((precioTotal * (1 + feeInterest / 100)) / 3).toFixed(0) +
+      ' <small><span style="font-weight: normal;"><b>6</b> cuotas de</span> $' +
+      ((precioTotal * (1 + feeInterest / 100)) / 6).toFixed(0) +
       "</small>";
   }
   
