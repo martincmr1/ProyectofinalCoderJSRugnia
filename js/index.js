@@ -1820,6 +1820,7 @@ document.getElementById("autos").addEventListener("change", function () {
   if (valor_select == "kicks") {
     campo1.value = "171795";
     campo5.value = "18578";
+    campo6.value = "765809988668"
   }
   if (valor_select == "note") {
     campo1.value = "171795";
@@ -2031,6 +2032,7 @@ document.getElementById("autos").addEventListener("change", function () {
     campo1.value = "176195";
     campo2.value = "176196";
     campo5.value = "18658";
+    campo6.value = "765809963214"
   }
 
   function actualizarDescripcion(campo, descripcionId, precioId, selectId) {
