@@ -1242,7 +1242,7 @@ document.getElementById("autos").addEventListener("change", function () {
 
     campo5.value = "15404";
     campo6.value = "15420";
-    campo7.value = "16424";
+    campo7.value = "7790184753870";
   }
   if (valor_select == "ranger22d") {
     campo1.value = "171895";
@@ -1252,7 +1252,7 @@ document.getElementById("autos").addEventListener("change", function () {
 
     campo5.value = "15404";
     campo6.value = "15420";
-    campo7.value = "16424";
+    campo7.value = "7790184753870";
   }
   if (valor_select == "cruze14") {
     campo1.value = "170995";
@@ -1466,7 +1466,7 @@ document.getElementById("autos").addEventListener("change", function () {
     campo6.value = "15352";
   }
   if (valor_select == "s10duramax") {
-    campo1.value = "171795";
+    campo1.value = "173895";
 
     campo5.value = "15980";
     campo6.value = "4011558061852";
