@@ -15,8 +15,7 @@
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script src="https://kit.fontawesome.com/302e8bad55.js" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
     
@@ -28,6 +27,8 @@
     <title>PRESUPUESTO YPF BOXES</title>
 </head>
 <body>
+  <div id="contenido">
+
     <header>        
     </header>
     <main> 
@@ -503,7 +504,8 @@
                   <img id="logo_aca" class="logo_aca border border-success-subtle" src="./img/aca.jpg" alt="" style="display:none;">  
                 </th>
                 <th>
-                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary" id="boton7">Calcular Presupuesto <i class="fa-solid fa-calculator" style="color: #ffffff;"></i></button>
+                  <img id="logo_credito" class="logo_credito border border-success-subtle" src="./img/credito.png" alt="" style="display:none;"><button class="btn btn-primary boton-separado" id="boton7"><i class="fa-solid fa-print" style="color: #ffffff;"></i>  Imprimir Presupuesto </button>  <button class="btn btn-primary" id="exportarPDF">
+                    <i class="fas fa-file-pdf"></i> Exportar Presupuesto a PDF
                 </th>
                 <th class="columnPadding" ></th>
               
@@ -692,7 +694,7 @@
 
 
 
-
+  </div>
     
     
 
@@ -739,7 +741,8 @@
 
 
 
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 
 
