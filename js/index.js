@@ -81,14 +81,37 @@ function verProductosapi() {
   fetch("https://api-boxes-default-rtdb.firebaseio.com/productos.json")
     .then((response) => response.json())
     .then((jsonResponse) => {
-      productosServer = jsonResponse;
-      productos = productosServer;
+      productosServer = jsonResponse.map((p) => {
+        const codigo = String(p.codigo);
 
-      // Llama a pricePremium() después de cargar los productos
+        let precioLimpio = p.precio;
+
+        if (typeof precioLimpio === "string") {
+          precioLimpio = precioLimpio.replace(/\./g, ""); // quita puntos de miles
+          precioLimpio = precioLimpio.replace(",", ".");  // reemplaza coma decimal
+        }
+
+        let precio = Number(precioLimpio);
+        precio = isNaN(precio) ? 0 : Math.round(precio); // redondeo al entero más cercano
+
+        return {
+          ...p,
+          codigo: codigo,
+          precio: precio, // ahora es entero
+        };
+      });
+
+      productos = productosServer;
+      productosCargados = true;
+
       pricePremium();
-      console.log(PREMIUM); // Imprime el valor de PREMIUM después de que se haya actualizado
+      console.log("✅ Productos cargados sin decimales:", productos);
+    })
+    .catch((error) => {
+      console.error("❌ Error al cargar productos:", error);
     });
 }
+
 
 verProductosapi();
 
